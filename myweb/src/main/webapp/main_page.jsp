@@ -41,11 +41,11 @@
 	<div class="dropdown-lang">
 		 <div class="dropdown-content-lang lang_text">
 			<span class="iconify" data-icon="twemoji:flag-united-states"></span>
-			<a href="#" lang='eng' class="active langItem">eng</a><br>
+			<a href="#" lang='eng' onclick = "changetoEng()" class="active langItem">eng</a><br>
 			<span class="iconify" data-icon="twemoji:flag-kazakhstan"></span> 
-			<a href="#" lang='kaz' class="langItem">kaz</a><br>
+			<a href="#" lang='kaz' onclick = "changetoKaz()" class="langItem">kaz</a><br>
 			<span class="iconify" data-icon="emojione-v1:flag-for-russia"></span>
-			<a href="#" lang='rus' class="langItem">rus</a><br>
+			<a href="#" lang='rus' onclick = "changetoRus()" class="langItem">rus</a><br>
 		 </div>
 	 </div>
 <!-- Ending of languages' settings -->
@@ -279,7 +279,7 @@ Sneak Peek
 
 <!--Animation-->
 <script src = "C:\Users\zhana\Downloads\WOW-master\WOW-master\dist\wow.min.js"></script>
-<script src="mainpage_script.js"></script>
+<script src="main_page_script.js"></script>
 <script>new WOW().init();</script>
 </body>
 
