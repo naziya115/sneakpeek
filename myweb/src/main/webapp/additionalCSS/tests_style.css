@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+*{
+  font-family: 'Poppins', sans-serif;
+}
+#testLink{
+	font-weight: normal;
+}
+/*Text Hovering Column styling*/
+.hoverColumn:hover{
+   transform:translateX(10) translateY(0);
+   transition:transform 0.2s ease-in-out;
+   transform:translateX(20px);
+}
+/*Text Hovering Column styling ended*/
+
+/*My Tests Menu Item styling begun*/
+.dropdown-container li a:hover{
+	color: #b0c4de;
+}
+/*My Tests Menu Item styling ended*/
+

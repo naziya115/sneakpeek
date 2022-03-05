@@ -1,0 +1,239 @@
+body {
+  display: flex;
+  flex-direction: column;
+  background: #eee;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+
+ input[type='radio'] {
+  width:20px;
+  height:20px;
+  border-radius:50%;
+  outline:none;
+}
+
+input[type='radio']:hover {
+  box-shadow:0 0 5px 0px lavender inset;
+}
+
+input[type='radio']:before {
+  content:'';
+  display:block;
+  width:60%;
+  height:60%;
+  margin: 20% auto;    
+  border-radius:50%;    
+}
+ input[type='radio']:checked:before {
+  background: #000000;
+}
+ 
+/* Slide button styling */
+.slide {
+  margin-top: 5%;
+  font-size: 20px;
+  font-weight: 200;
+  letter-spacing: 1px;
+  padding: 10px 20px 10px;
+  outline: 0;
+  border: 1px solid black;
+  cursor: pointer;
+  position: relative;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.slide i {
+  opacity: 0;
+  font-size: 13px;
+  transition: 0.2s;
+  position: absolute;
+  right: 5px;
+  top: 21px;
+  transition: transform 1;
+}
+
+.slide div {
+  transition: transform 0.8s;
+}
+
+.slide:hover div {
+  transform: translateX(-6px);
+}
+
+.slide::after {
+  content: "";
+  background-color: #66f2d5;
+  width: 100%;
+  z-index: -1;
+  position: absolute;
+  height: 100%;
+  top: 7px;
+  left: 7px;
+}
+
+.slide:hover i {
+  opacity: 1;
+  transform: translateX(-6px);
+}
+/* End of Slide Button  */
+.review{
+    position: relative;
+    float:left;
+    width: 60%;
+    margin-left: 30px;
+  }
+  .scrollspy{
+      height:600px;
+      overflow-y: scroll;
+      padding: 10px; 
+      border-color: #fff;
+      border-radius: 8px;
+      border-style: solid;
+      background-color: #fff;
+  }
+  .scroll{
+    height: 600px;
+    overflow-y: scroll;
+    padding: 10px; 
+    border-color: #eee;
+    border-radius: 8px;
+    border-style: solid;
+  }
+  .col-4 div a.active{
+      background-color:#17a2b8;
+      border-color: #17a2b8;
+  }
+  .col-4 div a{
+      color:#000;
+  }
+  .col-4{
+    width: 150px;
+    z-index: -1;
+}
+  form{
+    float:left;
+    position: relative;
+    width: 35%;
+  }
+  label{ 
+    display: block; 
+  }
+  input[type=submit]{
+    margin-top: 20px; 
+  }
+#click001{
+    float: right;
+    margin-right: 100px;
+}
+
+.header {
+    position:fixed;
+    z-index: 1;
+    width: 100%;
+    height: 70px;
+    background-color: #fff;
+    text-align : center;
+    top: 0;
+  }
+  .boxShadow{
+    box-shadow: 0 2px 4px rgba(0, 0, 0, .2);
+  }
+  #WebSite_Name{
+    position:absolute;
+    top:0;
+    left:0;
+    font-weight: bold;
+    position:fixed;
+    text-align : left;
+    margin-left: 60px;
+    margin-top: 20px;
+  
+  }
+  b{ 
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 20px; 
+    font-weight: bold;
+    z-index:10;
+  }
+  #websiteIcon{
+    position:absolute;
+    top:0;
+    left:0;
+    position:fixed;
+    text-align : left;
+    margin-top: 20px;
+    margin-left: 20px;
+  }
+  #testLink{
+      z-index: 1;
+      position:fixed;
+      text-align: center;
+      top: 0;
+      margin-top: 20px;
+      color: black;
+      font-family: 'Source Sans Pro', sans-serif;
+      font-size: 20px; 
+      font-weight: bold;
+      text-decoration: none;
+  }
+  #header{
+      margin-top: 150px;
+  }
+  #myprofile{
+      font-family: 'Source Sans Pro', sans-serif;
+      font-size: 20px; 
+      font-weight: bold;
+      position: fixed;
+      top: 20px;
+      right:150px;
+      z-index:10;
+  } 
+  .title{
+    font-size: 30px;
+    margin-top: 100px;
+    text-align: center;
+    font-family: Century Gothic,CenturyGothic,AppleGothic,sans-serif; 
+  }
+@media only screen and (max-width: 800px){
+    .header{
+        width: 100%;
+    }
+    #click001{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      float: center;
+      margin-right: 50px;
+    }
+    #myprofile{
+        right: 100px;
+    }
+    .list-group{
+      display: none;
+    }
+
+    .title{
+      display: none;
+    }
+    .col-4{
+        width: 100%;
+    }
+    .review{
+        width: 100%;
+        height: 50%;
+        margin-left: 0px;
+        padding: 10px;
+    }
+    form{
+        float:left;
+        position: relative;
+        width: 100%;
+    }
+    .container-fluid .col-8{
+        width: 100%;
+        margin-top: 50px;
+    }
+  }
+
+  

@@ -1,0 +1,87 @@
+.divider:after,
+.divider:before {
+  content: "";
+  flex: 1;
+  height: 1px;
+}
+
+.h-custom {
+  height: calc(100% - 73px);
+}
+
+@media (max-width: 1400px) {
+  .vh-100{
+    margin-top: 50px;
+  }
+}
+
+
+b{ 
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 20px; 
+  font-weight: bold;
+  position: fixed;
+  z-index:10;
+}
+#text{
+    padding: 1%;
+}
+img {
+    border-radius: 8px;
+    position: relative;
+  }
+#question{
+    margin-top: 10px;
+}
+#registerLink{
+  color: #c7b6dc;
+}
+.btn{
+    width: 100px;
+}
+.header {
+  position:fixed;
+  z-index: 1;
+  width: 100%;
+  height: 70px;
+  background-color: #FCF9FF;
+  text-align : center;
+  top: 0;
+}
+.boxShadow{
+  box-shadow: 0 2px 4px rgba(0, 0, 0, .2);
+}
+#WebSite_Name{
+  position:absolute;
+  top:0 !important;
+  left:0 !important;
+  position:fixed;
+  text-align : left;
+  margin-left: 60px;
+  margin-top: 20px;
+}
+#websiteIcon{
+  position:absolute;
+  top:0 !important;
+  left:0 !important;
+  position:fixed;
+  text-align : left;
+  margin-top: 20px;
+  margin-left: 20px;
+}
+#loginImage{
+    border-radius: 8px;
+    border-style: solid;
+    border-color: #c7b6dc;
+    width: 500px;
+    height: 350px;
+    float: left;
+}
+@media only screen and (max-width: 700px){
+  #loginImage{
+    display: none;
+  }
+  .header{
+  	width: 100%;
+  }
+}
