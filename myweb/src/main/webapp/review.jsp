@@ -1,7 +1,11 @@
+<%@ page  language="java" contentType="text/html;charset=UTF-8"%>
+<%@page import="java.sql.DriverManager"%>
+<%@page import="java.sql.ResultSet"%>
+<%@page import="java.sql.Statement"%>
+<%@page import="java.sql.Connection"%>
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-   <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Review</title>
 
@@ -11,6 +15,12 @@
 <link rel="stylesheet" href="additionalCSS/tests_style.css">
 <link rel="stylesheet" href="additionalCSS/dark_mode_style.css">
 </head>
+<style>
+	#testLink{
+		margin-top: 10px;
+		top: 10px;
+	}
+</style>
 <body>
 <!--Header with user name, sign up button, and divider between them-->
 <div id = "head" class="header boxShadow">
@@ -75,53 +85,65 @@
 
 
  <!-- Script-->
- <script src="reviewscript.js"></script>
-<script src = "additionalCSS/darktests_script.js"></script>
-
-<script>
-
-/*if(localStorage.getItem("languages") === "kaz"){
+ <script src="review_script.js"></script>
+ <script>
+alert(localStorage.getItem("lang"));
+if(localStorage.getItem("lang") === "kaz"){
 	changetoKaz();
-}else if(localStorage.getItem("languages") === "rus"){
-	changetRus();
-}*/
-changetRus();
-alert("naziya");
-
-const resultstxt = document.querySelectorAll('#resultstxt');
-const alert = document.querySelector('.alert');
-const reviewbtn = document.querySelector('#reviewbtn');
-const sidebar-title = document.querySelector('.sidebar-title');
-const navpill1 = document.querySelector('#navpill1');
-const navpill2 = document.querySelector('#navpill2');
-const navpill3 = document.querySelector('#navpill3');
-const navpill4 = document.querySelector('#navpill4');
-const navpill5 = document.querySelector('#navpill5');
+}
+if(localStorage.getItem("lang") === "rus"){
+	changetoRus();
+}
 
 function changetoKaz(){
-	resultstxt.textContent = "Практикалық тест нәтижелері";
-	alert.textContent = "Керемет Жұмыс! Тесттен өткеннен кейін қысқаша шолу жасаңыз және қателіктеріңізден сабақ алғаныңызға көз жеткізіңіз.";
-	reviewbtn.textContent = "Шолу";
-	sidebar-title.textContent = "Меню";
+	const testLink = document.querySelector('#testLink');
+	const reviewbtn = document.querySelector('#reviewbtn');
+	const resultstxt = document.querySelector('#resultstxt');
+	const alert = document.querySelector('.alert');
+	const sidebar_title = document.querySelector('#sidebar-title');
+	const navpill1 = document.querySelector('#navpill1');
+	const navpill2 = document.querySelector('#navpill2');
+	const navpill3 = document.querySelector('#navpill3');
+	const navpill4 = document.querySelector('#navpill4');
+	const navpill5 = document.querySelector('#navpill5');
+	
+	sidebar_title.textContent = "Меню";
 	navpill1.textContent = "1—тапсырма";
 	navpill2.textContent = "2—тапсырма";
 	navpill3.textContent = "3—тапсырма";
 	navpill4.textContent = "4—тапсырма";
 	navpill5.textContent = "5—тапсырма";
+	alert.textContent = "Керемет Жұмыс! Тесттен өткеннен кейін қысқаша шолу жасаңыз және қателіктеріңізден сабақ алғаныңызға көз жеткізіңіз.";
+	testLink.textContent = "Менің Тесттерім";
+	reviewbtn.textContent = "Шолу";
+	resultstxt.textContent = "Практикалық тест нәтижелері";
 }
+
 function changetoRus(){
-	resultstxt.textContent = "Результаты практического теста";
-	alert.textContent = "Отличная работа! После прохождения теста сделайте быстрый обзор и убедитесь, что вы учитесь на своих ошибках.";
-	reviewbtn.textContent = "Обзор";
-	sidebar-title.textContent = "Меню";
+	const testLink = document.querySelector('#testLink');
+	const reviewbtn = document.querySelector('#reviewbtn');
+	const resultstxt = document.querySelector('#resultstxt');
+	const alert = document.querySelector('.alert');
+	const sidebar_title = document.querySelector('#sidebar-title');
+	const navpill1 = document.querySelector('#navpill1');
+	const navpill2 = document.querySelector('#navpill2');
+	const navpill3 = document.querySelector('#navpill3');
+	const navpill4 = document.querySelector('#navpill4');
+	const navpill5 = document.querySelector('#navpill5');
+	
+	sidebar_title.textContent = "Меню";
 	navpill1.textContent = "1—задание";
 	navpill2.textContent = "2—задание";
 	navpill3.textContent = "3—задание";
 	navpill4.textContent = "4—задание";
 	navpill5.textContent = "5—задание";
-	
+	alert.textContent = "Отличная работа! После прохождения теста сделайте быстрый обзор и убедитесь, что вы учитесь на своих ошибках.";
+	testLink.textContent = "Мои Тесты";
+	reviewbtn.textContent = "Обзор";
+	resultstxt.textContent = "Результаты практического теста";
 }
 </script>
+<script src = "additionalCSS/darktests_script.js"></script>
  
 </body>
 </html>

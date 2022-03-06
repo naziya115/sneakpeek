@@ -2,9 +2,6 @@
 *{
   font-family: 'Poppins', sans-serif;
 }
-#testLink{
-	font-weight: normal;
-}
 /*Text Hovering Column styling*/
 .hoverColumn:hover{
    transform:translateX(10) translateY(0);

@@ -25,6 +25,10 @@
 	.dropdown-content {
 	  height: 70px;
 	}
+	#testLink{
+		margin-top: 10px;
+		top: 10px;
+	}
 </style>
 
 <title>Sneak Peek</title>
@@ -34,10 +38,10 @@
 
 <!--Header with user name, sign up button, and divider between them-->
 <div id = "head" class="header boxShadow">
+<div align = "center" id = "test"><a href = "school_level.jsp" onclick = "sendUserName()" class = "underlineTests" id = "testLink">My Tests</a></div>
 
 <!-- Change language -->
 <span id = "languages" onclick = "changeLanguages()" class="iconify" data-icon="ion:language-outline"></span>
-
 	<div class="dropdown-lang">
 		 <div class="dropdown-content-lang lang_text">
 			<span class="iconify" data-icon="twemoji:flag-united-states"></span>
@@ -56,9 +60,7 @@
 </svg>
 <b id = "WebSite_Name">Sneak Peek</b>
 
-<a href = "log_in.html"><button id = "sign_up" class = "btnCloser">Sign Up</button></a>
-
-<div align = "center" id = "test"><a href = "school_level.jsp" onclick = "sendUserName()" class = "underlineTests" id = "testLink">My Tests</a></div>
+<a href = "login.jsp"><button id = "sign_up" class = "btnCloser">Sign Up</button></a>
 
 
 <div id = "myprofile"  class="value-container">
@@ -93,10 +95,10 @@ if ( $('#username').text().length == 0 ) {
   <nav>
     <ul id = "menuList">
       <li><a id = "linktoTests" href = "school_level.jsp">My Tests</a></li>
-      <li><a href = "log_in.html" class = "btnCloser">Sign Up</a></li>
+      <li><a href = "login.jdp" class = "btnCloser">Sign Up</a></li>
       <li><span style = "color: #fff" id = "myusername">${name}</span></li>
       <p id = "dark"> <span class="iconify mode" data-icon="ic:baseline-mode-night"></span>Night</p>
-	  <<p id = "light"> <span class="iconify mode" data-icon="ic:baseline-light-mode"></span>Light</p>
+	  <p id = "light"> <span class="iconify mode" data-icon="ic:baseline-light-mode"></span>Light</p>
     </ul>
   </nav>
   <i class="fa fa-bars" id = "menu" style="font-size:24px" onclick = "togglemenu()"></i>
@@ -139,7 +141,7 @@ function togglemenu(){
 <span class = "square animate__animated animate__fadeInDown lines"></span>
 <h5 id = "comment">Here you can test yourself on different school subjects to know your weak and strong sides in order to improve them.</h5>
       <!--Button to check out sth (don't know for what yet)-->
-<a href = "log_in.html"><button class = "checkOutBtn btnCloser" id = "checkitout">Check it out</button></a>
+<a href = "login.jdp"><button class = "checkOutBtn btnCloser" id = "checkitout">Check it out</button></a>
 
 
 <div class="line">
@@ -279,7 +281,7 @@ Sneak Peek
 
 <!--Animation-->
 <script src = "C:\Users\zhana\Downloads\WOW-master\WOW-master\dist\wow.min.js"></script>
-<script src="main_page_script.js"></script>
+<script src="mainpage_script.js"></script>
 <script>new WOW().init();</script>
 </body>
 

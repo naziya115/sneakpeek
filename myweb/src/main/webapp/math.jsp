@@ -16,9 +16,9 @@
 <title>Mathematics</title>
 <!-- Our Custom CSS -->
 <link rel="stylesheet" href="school_level_style.css">
-<link rel="stylesheet" href="additionalCSS/text_style.css">
+<link rel="stylesheet" href="additionalCSS/textstyle.css">
 <link rel="stylesheet" href="additionalCSS/tests_style.css">
-<link rel="stylesheet" href="additionalCSS/darkmode_style.css">
+<link rel="stylesheet" href="additionalCSS/dark_mode_style.css">
 <script src="https://code.iconify.design/2/2.1.2/iconify.min.js"></script>
 <!-- Font Awesome JS -->
 <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
@@ -51,42 +51,42 @@
  
 <div id = "sidenav" class="sidenav">
     <div class="block"> 
-        <button class="dropdown-btn"> <div class="hover">High School</div>
-            <span class="hidden">(9-12 grade)</span> 
+        <button class="dropdown-btn"> <div class="hover" id = "hsHeader">High School</div>
+            <span class="hidden">(9-12)</span> 
             <i class="fa fa-caret-down"></i>
           </button>
           <div class="dropdown-container list">
             <ul> 
-                <li><a href="school_level.jsp">Computer Science</a></li>
-                <li><a href="english.jsp">English Language</a></li>
-                <li><a href="math.jsp">Mathematics</a></li>
+                <li><a href="school_level.jsp" class = "cs">Computer Science</a></li>
+                <li><a href="english.jsp" class = "english">English Language</a></li>
+                <li><a href="math.jsp" class = "mathematics">Mathematics</a></li>
            </ul>
           </div>
         </div>
     <div class="block"> 
-        <button class="dropdown-btn"> <div class="hover">Middle School</div>
-            <span class="hidden">(5-8 grade)</span> 
+        <button class="dropdown-btn"> <div class="hover" id = "midHeader">Middle School</div>
+            <span class="hidden">(5-8)</span> 
             <i class="fa fa-caret-down"></i>
           </button>
           <div class="dropdown-container list">
             <ul> 
-                <li><a href="csmid.jsp">Computer Science</a></li>
-                <li> <a href="englishmid.jsp">English Language</a></li>
-                <li>  <a href="mathmid.jsp">Mathematics</a></li>
+                <li><a href="csmid.jsp" class = "cs">Computer Science</a></li>
+                <li> <a href="englishmid.jsp" class = "english">English Language</a></li>
+                <li>  <a href="mathmid.jsp" class = "mathematics">Mathematics</a></li>
            </ul>
           </div>
         </div>
 
     <div class="block"> 
-        <button class="dropdown-btn"> <div class="hover">Elementary School</div>
-            <span class="hidden">(1-4 grade)</span> 
+        <button class="dropdown-btn"> <div class="hover" id = "elHeader">Elementary School</div>
+            <span class="hidden">(1-4)</span> 
             <i class="fa fa-caret-down"></i>
           </button>
           <div class="dropdown-container list">
             <ul> 
-                <li><a href="csel.jsp">Computer Science</a></li>
-                <li> <a href="englishel.jsp">English Language</a></li>
-                <li>  <a href="mathel.jsp">Mathematics</a></li>
+                <li><a href="csel.jsp" class = "cs">Computer Science</a></li>
+                <li> <a href="englishel.jsp" class = "english">English Language</a></li>
+                <li>  <a href="mathel.jsp" class = "mathematics">Mathematics</a></li>
            </ul>
           </div>
         </div>
@@ -95,20 +95,20 @@
 
 <!-- Tests -->
 
- <p class = "title">Mathematics Tests</p>
+ <p class = "title">Mathematics Practice Tests</p>
     <table  class = "headers">
       <tr>
-        <th scope="col">#</th>
-        <th scope="col">Level</th>
-        <th scope="col">Score</th>
+        <th scope="col" id = "th">#</th>
+        <th scope="col" id = "level">Level</th>
+        <th scope="col" id = "score">Score</th>
       </tr>
     </table>
 
     <table class = "separate">
   
       <tr class = "hoverColumn" onclick="window.location='math1hs.jsp'">
-        <td id = "1" scope="row"><a>Test 1</a></td>
-        <td>Easy</td>
+        <td id = "1" scope="row"><a id = "test1">Test 1</a></td>
+        <td class = "easy">Easy</td>
         
         
         <%
@@ -159,8 +159,8 @@
         
       </tr>
      <tr class = "hoverColumn" onclick="window.location='math2hs.jsp'">
-        <td id = "1" scope="row"><a>Test 2</a></td>
-        <td>Easy</td>
+        <td id = "2" scope="row"><a id = "test2">Test 2</a></td>
+        <td class = "easy">Easy</td>
       <%
 		try{ 
 			connection = DriverManager.getConnection(connectionUrl+dbName, userId, password);
@@ -187,8 +187,8 @@
 	      %>     
       </tr>
       <tr class = "hoverColumn" onclick="window.location='math3hs.jsp'">
-        <td id = "1" scope="row"><a>Test 3</a></td>
-        <td>Easy</td>
+        <td id = "3" scope="row"><a id = "test3">Test 3</a></td>
+        <td class = "easy">Easy</td>
   <%
 		try{ 
 			connection = DriverManager.getConnection(connectionUrl+dbName, userId, password);
@@ -215,8 +215,8 @@
 	      %>  
       </tr>
        <tr class = "hoverColumn" onclick="window.location='math4hs.jsp'">
-        <td id = "1" scope="row"><a>Test 4</a></td>
-        <td>Easy</td>
+        <td id = "4" scope="row"><a id = "test4">Test 4</a></td>
+        <td class = "easy">Easy</td>
          <%
 		try{ 
 			connection = DriverManager.getConnection(connectionUrl+dbName, userId, password);
@@ -243,8 +243,8 @@
 	      %>  
       </tr>
     <tr class = "hoverColumn" onclick="window.location='math5hs.jsp'">
-        <td id = "1" scope="row"><a>Test 5</a></td>
-        <td>Easy</td>
+        <td id = "5" scope="row"><a id = "test5">Test 5</a></td>
+        <td class = "easy">Easy</td>
           <%
 		try{ 
 			connection = DriverManager.getConnection(connectionUrl+dbName, userId, password);
@@ -271,8 +271,8 @@
 	      %>  
       </tr>
        <tr class = "hoverColumn" onclick="window.location='math6hs.jsp'">
-        <td id = "1" scope="row"><a>Test 6</a></td>
-        <td>Average</td>
+       <td id = "6" scope="row"><a id = "test6">Test 6</a></td>
+        <td class = "average">Average</td>
           <%
 		try{ 
 			connection = DriverManager.getConnection(connectionUrl+dbName, userId, password);
@@ -299,8 +299,8 @@
 	      %>  
       </tr>
        <tr class = "hoverColumn" onclick="window.location='math7hs.jsp'">
-        <td id = "1" scope="row"><a>Test 7</a></td>
-        <td>Average</td>
+        <td id = "7" scope="row"><a id = "test7">Test 7</a></td>
+        <td class = "average">Average</td>
           <%
 		try{ 
 			connection = DriverManager.getConnection(connectionUrl+dbName, userId, password);
@@ -327,8 +327,8 @@
 	      %>  
       </tr>
       <tr class = "hoverColumn" onclick="window.location='math8hs.jsp'">
-        <td id = "1" scope="row"><a>Test 8</a></td>
-        <td>Average</td>
+        <td id = "8" scope="row"><a id = "test8">Test 8</a></td>
+        <td class = "average">Average</td>
          <%
 		try{ 
 			connection = DriverManager.getConnection(connectionUrl+dbName, userId, password);
@@ -355,8 +355,8 @@
 	      %>  
       </tr>
        <tr class = "hoverColumn" onclick="window.location='math9hs.jsp'">
-        <td id = "1" scope="row"><a>Test 9</a></td>
-        <td>Hard</td>
+        <td  id = "9" scope="row"><a id = "test9">Test 9</a></td>
+        <td class = "hard">Hard</td>
           <%
 		try{ 
 			connection = DriverManager.getConnection(connectionUrl+dbName, userId, password);
@@ -383,8 +383,8 @@
 	      %>  
       </tr>
    <tr class = "hoverColumn" onclick="window.location='math10hs.jsp'">
-        <td id = "1" scope="row"><a>Test 10</a></td>
-        <td>Hard</td>
+        <td id = "10" scope="row"><a id = "test10">Test 10</a></td>
+        <td class = "hard">Hard</td>
          <%
 		try{ 
 			connection = DriverManager.getConnection(connectionUrl+dbName, userId, password);
@@ -415,7 +415,7 @@
 
 
     <script src = "schoollevel_script.js"></script>
-    <script src = "additionalCSS/darkmode_script.js"></script>
+    <script src = "additionalCSS/dark_mode_script.js"></script>
 
 </body>
 </html> 

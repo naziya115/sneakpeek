@@ -4,9 +4,13 @@
 }
 /*My Tests Link styling started*/
 #testLink{
- text-decoration: none;
- top: 15px;
+	text-decoration: none;
+	margin-top: 17px;
+	top: 17px;
+	margin-left: 120px;
+	float: center;
 }
+	
 .underlineTests {
   border-bottom: 3px solid #fff;
   transition: all 0.25s linear;

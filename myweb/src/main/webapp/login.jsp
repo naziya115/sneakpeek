@@ -1,3 +1,8 @@
+    <%@ page  language="java" contentType="text/html;charset=UTF-8"%>
+    <%@page import="java.sql.DriverManager"%>
+	<%@page import="java.sql.ResultSet"%>
+	<%@page import="java.sql.Statement"%>
+	<%@page import="java.sql.Connection"%>
 <!DOCTYPE html>
 <html>
 	<meta charset="UTF-8">
@@ -13,8 +18,20 @@
         <link rel="stylesheet" href="additionalCSS/text_style.css">
         <link rel="stylesheet" href="additionalCSS/darkmode_style.css">
     </head>
+    <style>
+		#loginLink:hover{
+		  color: #fff;
+		}
+		/*Log In Btn Styling*/
+		#signupStyling #sign_up{
+			background-color: #e5ccc9;
+			padding: 8px;
+			border-radius: 8px;
+			border-color: #e5ccc9;
+			width: 150px;
+		}
+</style>
 <body>
-
   <!--Header with user name, sign up button, and divider between them-->
   <div id = "head" class="header boxShadow">
 
@@ -65,14 +82,14 @@
       
                 <div class="text-center text-lg-start mt-3 pt-2">
                 
+            
+                  <div id = "signupStyling">
+	                 <a href = "login.jsp" id = "btn" type="submit" class = "btnCloser">
+	                 <button id = "sign_up" class = "btnCloser">Log In</button></a>
+                  </div>
                 
-                  <button id = "btn" type="submit" class = "btn btn-lg btnCloser"
-                  style = "background-color: #c7b6dc;" style="padding-left: 2.5rem; 
-                  padding-right: 2.5rem;" >Log In</button>
-                  
-                
-                  <p id = "question" >For the first time with us? <a id = "loginLink" href="register.html"
-                    >Register</a></p>
+                  <p id = "question" >For the first time with us?</p>
+                   <a id = "loginLink" href="register.jsp">Register</a>
                 </div>
       
               </form>
@@ -81,44 +98,49 @@
         </div>
       </section>
       
-  <script src = "additionalCSS/darkregister_script.js"></script>
-  <script>
-  alert(localStorage.getItem("lang"));
-   /* const btn = document.querySelectorAll('#btn');
-	const emailplaceholder = document.querySelectorAll('#emailplaceholder');
-	const pswplaceholder = document.querySelector('#pswplaceholder');
-	const email = document.querySelector('.email');
-	const psw = document.querySelector('.psw');
-	const checkbox = document.querySelector('.checkbox');
-	const question = document.querySelector('#question');
-	const loginLink = document.querySelector('#loginLink');
-	
-	
-  if(localStorage.getItem("languages") === "kaz"){
-  	changetoKaz();
-  }else if(localStorage.getItem("languages") === "rus"){
-	  changetoRus();
+  <script src = "additionalCSS/dark_register_script.js"></script>
+  <script>	
+  if(localStorage.getItem("lang") === "kaz"){
+  		changetoKaz();
   }
+  if(localStorage.getItem("lang") === "rus"){
+	  	changetoRus();
+  }	
   function changetoKaz(){  	
-  	emailplaceholder.textContent = "Жарамды электрондық пошта мекенжайын енгізіңіз";
-  	pswplaceholder.textContent = "Жарамды құпия сөзді енгізіңіз";
-  	email.textContent = "Электрондық пошта мекенжайы";
-  	psw.textContent = "Пароль";
-  	checkbox.textContent = "Мені есіңде сақтаңыз";
-  	question.textContent = "Бізбен алғаш рет?";
-  	loginLink.textContent = "Тіркеуге";
-  	btn.textContent = "Авторлану";
+		const email = document.querySelector('.email');
+		const psw = document.querySelector('.psw');
+		const checkbox = document.querySelector('.checkbox');
+		const question = document.querySelector('#question');
+		const loginLink = document.querySelector('#loginLink');
+		const signupText = document.querySelector('#sign_up');
+	  	
+	    document.getElementsByName('email')[0].placeholder = "Жарамды электрондық пошта мекенжайын енгізіңіз";
+	    document.getElementsByName('psw')[0].placeholder = "Жарамды құпия сөзді енгізіңіз";
+	    
+	  	email.textContent = "Электрондық пошта мекенжайы";
+	  	psw.textContent = "Пароль";
+	  	checkbox.textContent = "Мені есіңде сақтаңыз";
+	  	question.textContent = "Бізбен алғаш рет?";
+	  	loginLink.textContent = "Тіркеуге";
   }
   function changetoRus(){
-  	emailplaceholder.textContent = "Введите действительный адрес электронной почты";
-  	pswplaceholder.textContent = "Введите правильный пароль";
-  	email.textContent = "Адрес электронной почты";
-  	psw.textContent = "Пароль";
-  	checkbox.textContent = "Запомнить меня";
-  	question.textContent = "Впервые с нами?";
-  	loginLink.textContent = "Зарегистрироваться";
-  	btn.textContent = "Войти";
-  }*/
+		const email = document.querySelector('.email');
+		const psw = document.querySelector('.psw');
+		const checkbox = document.querySelector('.checkbox');
+		const question = document.querySelector('#question');
+		const loginLink = document.querySelector('#loginLink');
+		const signupText = document.querySelector('#sign_up');
+		
+		document.getElementsByName('email')[0].placeholder = "Введите действительный адрес электронной почты";
+	    document.getElementsByName('psw')[0].placeholder = "Введите правильный пароль";
+	    
+	  	signupText.textContent = "Войти";
+	  	email.textContent = "Адрес электронной почты";
+	  	psw.textContent = "Пароль";
+	  	checkbox.textContent = "Запомнить меня";
+	  	question.textContent = "Впервые с нами?";
+	  	loginLink.textContent = "Зарегистрироваться";
+  }
   </script>
 </body>
 </html>

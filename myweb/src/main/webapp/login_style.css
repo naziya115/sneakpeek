@@ -33,9 +33,10 @@ img {
 #question{
     margin-top: 10px;
 }
-#registerLink{
+#loginLink{
   color: #c7b6dc;
 }
+
 .btn{
     width: 100px;
 }

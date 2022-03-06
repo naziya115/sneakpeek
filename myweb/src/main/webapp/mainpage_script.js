@@ -3,6 +3,12 @@ light.onclick = function() {
 	localStorage.setItem("darkMode", false); 
     document.location.reload();
 };
+var dark = document.getElementById("dark");
+dark.onclick = function() {
+	localStorage.setItem("darkMode", true); 
+    changeMode();
+};
+
 if(localStorage.getItem("lang") === "kaz"){
   	changetoKaz();
 }
@@ -11,12 +17,6 @@ if(localStorage.getItem("lang") === "rus"){
 }
 
 changeMode();
-
-var dark = document.getElementById("dark");
-dark.onclick = function() {
-	localStorage.setItem("darkMode", true); 
-    changeMode();
-};
 
 function changeMode() {
         if(localStorage.getItem("darkMode") === "true"){
@@ -62,7 +62,8 @@ function changeLanguages(){
 }
 		
 		
-		function changetoKaz(){
+	function changetoKaz(){
+				const testLink = document.querySelector('#testLink');
 				localStorage.setItem("lang", "kaz"); 
 				const langEl = document.querySelector('body');
 				const link = document.querySelectorAll('a');
@@ -118,9 +119,11 @@ function changeLanguages(){
 				subtestText.textContent =  "Тест аяқталғаннан кейін сізге тестте болған әр сұраққа түсіндірмелермен жауаптар беріледі. Әр тесттен кейін шолу жасағаныңызға көз жеткізіңіз. Тек осы Стратегияның көмегімен сіз бірдей қателіктерді қайталамауға және осы саладағы біліміңізді жақсартуға үйренесіз.";
 				testreviewHeaderText.textContent = "Шолу";
 				testreviewText.textContent = "Sneak Peek сізге әр пән бойынша 10 тест ұсынады. Тесттер әртүрлі қиындық деңгейлеріне бөлінеді. Яғни, жеңіл, орташа және күрделі.  Сіз күрделілігі бойынша сізге сәйкес келетін тесттерді таңдап, кейін келесі деңгейге өте аласыз.";
+				testLink.textContent = "Менің Тесттерім";
 		}
 		
 		function changetoRus(){
+				const testLink = document.querySelector('#testLink');
 				localStorage.setItem("lang", "rus"); 
 				const langEl = document.querySelector('body');
 				const link = document.querySelectorAll('a');
@@ -176,6 +179,7 @@ function changeLanguages(){
 				subtestText.textContent = "После завершения теста вы получите ответы с пояснениями на каждый вопрос, который был в тесте. Убедитесь, что после каждого пройденного теста вы делаете обзор. Только благодаря этой стратегии вы научитесь не повторять ошибок и улучшите свои знания в этой области."
 				testreviewHeaderText.textContent = "Обзор";
 				testreviewText.textContent = "Sneak Peek предлагает вам 10 тестов по каждому предмету. Тесты разделены на различные уровни сложности. Это легкий, средний и сложный.  Вы можете выбрать тесты, которые подходят вам по уровню сложности, и затем перейти на следующий уровень."
+				testLink.textContent = "Мои Тесты";
 		}
 function changetoEng(){
 	localStorage.setItem("lang", "eng");

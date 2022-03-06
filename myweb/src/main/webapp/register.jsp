@@ -1,3 +1,8 @@
+    <%@ page  language="java" contentType="text/html;charset=UTF-8"%>
+    <%@page import="java.sql.DriverManager"%>
+	<%@page import="java.sql.ResultSet"%>
+	<%@page import="java.sql.Statement"%>
+	<%@page import="java.sql.Connection"%>
 <!DOCTYPE html>
 <html>
     <head>
@@ -87,7 +92,7 @@
           <div class="text-center text-lg-start mt-3 pt-2">
      <button type="submit" id = "btn" class = "btn btn-lg btnCloser"
                   style = "background-color: #c7b6dc;" style="padding-left: 2.5rem; padding-right: 2.5rem;">Register</button>
-            <p id = "question" style = "color: black;" >Do you have an account? <a href="log_in.html"
+            <p id = "question" style = "color: black;" >Do you have an account? <a href="login.jsp"
               id = "loginLink">Log In</a></p>
           </div>
 
@@ -97,7 +102,7 @@
     </div>
     
 
-<script src = "additionalCSS/darkregister_script.js"></script>
+<script src = "additionalCSS/dark_register_script.js"></script>
 <script>
 if(localStorage.getItem("lang")==="rus"){
 	changetoRus();
@@ -105,74 +110,70 @@ if(localStorage.getItem("lang")==="rus"){
 if(localStorage.getItem("lang")==="kaz"){
 	changetoKaz();
 }
-const fname = document.querySelectorAll('#fname');
-/*const fnameText = document.querySelectorAll('.fnameText');
-const lname = document.querySelectorAll('#lname');
-const lnameText = document.querySelectorAll('.lnameText');
-const sname = document.querySelectorAll('#sname');
-const snameText = document.querySelectorAll('.snameText');
-
-const chooseText = document.querySelectorAll('#chooseText');
-const el = document.querySelectorAll('#el');
-const mid = document.querySelectorAll('#mid');
-const high = document.querySelectorAll('#high');
-const txt_school = document.querySelectorAll('#txt_school');
-
-const email = document.querySelectorAll('#email');
-const psw = document.querySelectorAll('#psw');
-const emailText = document.querySelectorAll('.emailText');
-const pswText = document.querySelectorAll('.pswText');
-
-const checkbox = document.querySelector('.checkbox');
-const question = document.querySelector('#question');
-const loginLink = document.querySelector('#loginLink');*/
-
 
 function changetoKaz(){
-	/*fname.textContent = "Өз атыңызды енгізіңіз";
+	const fnameText = document.querySelector('.fnameText');
+	const lnameText = document.querySelector('.lnameText');
+	const snameText = document.querySelector('.snameText');
+	const chooseText = document.querySelector('#chooseText');
+	const txt_school = document.querySelector('#txt_school');
+	const email = document.querySelector('.emailText');
+	const psw = document.querySelector('.pswText');
+	
+	const checkbox = document.querySelector('.checkbox');
+	const question = document.querySelector('#question');
+	const loginLink = document.querySelector('#loginLink');
+	
 	fnameText.textContent = "Аты";
-	lname.textContent = "Жарамды құпия сөзді енгізіңіз";
 	lnameText.textContent = "Тегі";
-	sname.textContent = "Мектептің атын енгізіңіз";
 	snameText.textContent = "Мектеп атауы";
-	
 	chooseText.textContent = "Мектеп деңгейін таңдаңыз";
-	el.textContent = "Кіші Сыныптар";
-	mid.textContent = "Орта Сыныптар";
-	high.textContent = "Жоғарғы Сыныптар";
 	txt_school.textContent = "Мектеп Деңгейі";
-	
 	email.textContent = "Электрондық пошта мекенжайы";
 	psw.textContent = "Пароль";
-	emailText.textContent = "Жарамды электрондық пошта мекенжайын енгізіңіз";
-	pswText.textContent = "Құпия сөзді енгізіңіз";
 	
-	checkbox.textContent = "Мені есіңде сақтаңыз";
+	document.getElementsByName('email')[0].placeholder = "Жарамды электрондық пошта мекенжайын енгізіңіз";
+    document.getElementsByName('psw')[0].placeholder = "Құпия сөзді енгізіңіз";
+    
+	document.getElementsByName('fname')[0].placeholder = "Өз атыңызды енгізіңіз";
+    document.getElementsByName('lname')[0].placeholder = "Тегіңізді енгізіңіз";
+    document.getElementsByName('sname')[0].placeholder = "Мектептің атын енгізіңіз";
+    
+    checkbox.textContent = "Мені есіңде сақтаңыз";
 	question.textContent = "Аккаунт бар ма?";
-	loginLink.textContent = "Кіру";*/
+	loginLink.textContent = "Кіру";
 }
 function changetoRus(){
-	fname.textContent = "Введите свое имя";
-	alert(1);
-	/*fnameText.textContent = "Имя";
-	lname.textContent = "Введите свою фамилию";
+	const fnameText = document.querySelector('.fnameText');
+	const lnameText = document.querySelector('.lnameText');
+	const snameText = document.querySelector('.snameText');
+	const chooseText = document.querySelector('#chooseText');
+	const txt_school = document.querySelector('#txt_school');
+	const email = document.querySelector('.emailText');
+	const psw = document.querySelector('.pswText');
+	
+	const checkbox = document.querySelector('.checkbox');
+	const question = document.querySelector('#question');
+	const loginLink = document.querySelector('#loginLink');
+	
+	fnameText.textContent = "Имя";
 	lnameText.textContent = "Фамилия";
-	sname.textContent = "Введите название вашей школы";
-	
+	snameText.textContent = "Название вашей школы";
 	chooseText.textContent = "Выберите свое школьное звено";
-	el.textContent = "Младшие классы";
-	mid.textContent = "Средние классы";
-	high.textContent = "Старшие классы";
 	txt_school.textContent = "Школьное Звено";
-	
-	email.textContent = "Электронный Адрес";
+	email.textContent = "Электронная почта";
 	psw.textContent = "Пароль";
-	emailText.textContent = "Введите электронный адрес";
-	pswText.textContent = "Введите пароль";
 	
-	checkbox.textContent = "Запомнить меня";
+	document.getElementsByName('email')[0].placeholder = "Введите электронный адрес";
+    document.getElementsByName('psw')[0].placeholder = "Введите пароль";
+    
+	document.getElementsByName('fname')[0].placeholder = "Введите свое имя";
+    document.getElementsByName('lname')[0].placeholder = "Введите свою фамилию";
+    document.getElementsByName('sname')[0].placeholder = "Введите название вашей школы";
+    
+    checkbox.textContent = "Запомнить меня";
 	question.textContent = "Есть ли у вас аккаунт?";
-	loginLink.textContent = "Войти";*/
+	loginLink.textContent = "Войти";
 }
 </script>
 
