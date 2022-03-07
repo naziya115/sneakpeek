@@ -34,8 +34,6 @@
 <!--Header with user name, sign up button, and divider between them-->
 <div id = "head" class="header boxShadow">
 <div align = "center" id = "test"><a href = "school_level.jsp" onclick = "sendUserName()" class = "underlineTests" id = "testLink">My Tests</a></div>
-
-
 <!-- Change language -->
 <span id = "languages" onclick = "changeLanguages()" class="iconify" data-icon="ion:language-outline"></span>
 	<div class="dropdown-lang">
@@ -50,6 +48,8 @@
 	 </div>
 
 <!-- Ending of languages' settings -->
+<a id = "analytics" href = "analytics/analytics.jsp">Analytics</a>
+
 
 <svg id = "websiteIcon" xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-bookmark-heart" viewBox="0 0 16 16">
 <path fill-rule="evenodd" d="M8 4.41c1.387-1.425 4.854 1.07 0 4.277C3.146 5.48 6.613 2.986 8 4.412z"/>
@@ -87,21 +87,33 @@ if ( $('#username').text().length == 0 ) {
 
 
 <!--Header with user name, sign up button, and divider between them-->
-<div class="for_phones">
+<div id = "head" class="for_phones">
 <div class="container">
 <div class="navbar">
   <nav>
     <ul id = "menuList">
       <li><a id = "linktoTests" href = "school_level.jsp">My Tests</a></li>
-      <li><a href = "login.jdp" class = "btnCloser">Sign Up</a></li>
+      <li><a href = "login.jsp" class = "btnCloser">Sign Up</a></li>
+      <li><a href = "analytics/analytics.jsp">Analytics</a></li>
       <li><span style = "color: #fff" id = "myusername">${name}</span></li>
-      <p id = "dark"> <span class="iconify mode" data-icon="ic:baseline-mode-night"></span>Night</p>
-	  <p id = "light"> <span class="iconify mode" data-icon="ic:baseline-light-mode"></span>Light</p>
     </ul>
   </nav>
   <i class="fa fa-bars" id = "menu" style="font-size:24px" onclick = "togglemenu()"></i>
 </div>
 </div>
+<span id = "lightForPhone" class="iconify" data-icon="ic:baseline-light-mode"></span>
+<span id = "darkForPhone" class="iconify" data-icon="ic:baseline-dark-mode"></span>
+<span id = "languages" onclick = "changeLanguagesForPhone()" class="iconify" data-icon="ion:language-outline"></span>
+	<div class="dropdown-lang">
+		 <div class="dropdown-content-lang-phones lang_text">
+			<span class="iconify" data-icon="twemoji:flag-united-states"></span>
+			<a href="#" lang='eng' onclick = "changetoEng()" class="active langItem">eng</a><br>
+			<span class="iconify" data-icon="twemoji:flag-kazakhstan"></span> 
+			<a href="#" lang='kaz' onclick = "changetoKaz()" class="langItem">kaz</a><br>
+			<span class="iconify" data-icon="emojione-v1:flag-for-russia"></span>
+			<a href="#" lang='rus' onclick = "changetoRus()" class="langItem">rus</a><br>
+		 </div>
+	 </div>
 </div>
 
 <script>
@@ -139,7 +151,7 @@ function togglemenu(){
 <span class = "square animate__animated animate__fadeInDown lines"></span>
 <h5 id = "comment">Here you can test yourself on different school subjects to know your weak and strong sides in order to improve them.</h5>
       <!--Button to check out sth (don't know for what yet)-->
-<a href = "login.jdp"><button class = "checkOutBtn btnCloser" id = "checkitout">Check it out</button></a>
+<a href = "login.jsp"><button class = "checkOutBtn" id = "checkitout">Check it out</button></a>
 
 
 <div class="line">

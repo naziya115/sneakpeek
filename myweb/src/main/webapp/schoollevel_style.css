@@ -19,7 +19,13 @@
 .boxShadow{
   box-shadow: 0 2px 4px rgba(0, 0, 0, .2);
 }
+#WebSite_Name:hover{
+  color: #e5ccc9;
+  font-size: 25px;
+
+}
 #WebSite_Name{
+  color: #000;
   position:absolute;
   top:0;
   left:0;

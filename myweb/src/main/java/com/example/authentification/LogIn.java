@@ -69,7 +69,7 @@ public class LogIn extends jakarta.servlet.http.HttpServlet {
 				request.setAttribute("id", resultSet.getString("id"));
 				request.setAttribute("name", resultSet.getString("fname") + " " + resultSet.getString("lname"));
 				 HttpSession session = request.getSession();
-				 session.setAttribute("uname", resultSet.getString("fname") + " " + resultSet.getString("lname"));
+				 session.setAttribute("name", resultSet.getString("fname") + " " + resultSet.getString("lname"));
 				 
 				RequestDispatcher rd = request.getRequestDispatcher("main_page.jsp");
 				rd.forward(request, response);

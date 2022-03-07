@@ -15,7 +15,7 @@
 
 <title>Computer Science</title>
 <!-- Our Custom CSS -->
-<link rel="stylesheet" href="school_level_style.css">
+<link rel="stylesheet" href="schoollevel_style.css">
 <link rel="stylesheet" href="additionalCSS/pretty_text_style.css">
 <link rel="stylesheet" href="additionalCSS/tests_style.css">
 <link rel="stylesheet" href="additionalCSS/dark_mode_style.css">

@@ -63,7 +63,7 @@
       color: #67285e;
       cursor: pointer;
   }
-  .dropdown-content-lang {
+  .dropdown-content-lang, .dropdown-content-lang-phones{
   	margin-top: 100px;
     padding: 5px;
     display: none;
@@ -90,3 +90,5 @@
     border-radius: 50%;
   }
 /*Settings Icon styling ends*/
+
+

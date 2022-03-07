@@ -2,6 +2,35 @@
 *{
   font-family: 'Poppins', sans-serif;
 }
+/*Analytics Styling*/
+#analytics{
+	color: #000;
+	text-decoration: none;
+	float: right;
+	margin-right: 150px;
+	margin-top: 23px;
+}
+#analytics:hover{
+	color: #e5ccc9;
+	font-size: 17px;
+}
+
+
+/*Modes For Phone*/
+#lightForPhone, #darkForPhone{
+  font-size: 30px;
+  float: right;
+  margin-right: 5px;
+}
+#menu{
+	position: fixed;
+}
+
+/*Check it Out Btn*/
+.checkOutBtn:hover {
+  width: 150px;
+}
+
 /*My Tests Link styling started*/
 #testLink{
 	margin-top: 5px;

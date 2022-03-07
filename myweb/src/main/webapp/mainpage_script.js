@@ -9,6 +9,32 @@ dark.onclick = function() {
     changeMode();
 };
 
+/*Mode For Phones */
+document.getElementById("darkForPhone").onclick = function() {
+	localStorage.setItem("darkMode", true); 
+    changeMode();
+};
+
+document.getElementById("lightForPhone").onclick = function() {
+	localStorage.setItem("darkMode", false); 
+    document.location.reload();
+};
+
+/*Languages For Phones */
+function changeLanguagesForPhone(){
+	var content = document.querySelector(".dropdown-content-lang-phones");
+    if(content.style.height == "100px"){
+        content.style.height = "20px"; 
+        content.style.display = "none"; 
+    }
+    else{
+        content.style.height = "100px"; 
+        content.style.display = "block"; 
+    }
+}
+
+
+
 if(localStorage.getItem("lang") === "kaz"){
   	changetoKaz();
 }
