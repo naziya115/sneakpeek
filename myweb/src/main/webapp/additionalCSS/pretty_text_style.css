@@ -4,10 +4,11 @@
 }
 /*My Tests Link styling started*/
 #testLink{
+	margin-top: 5px;
+	top: 10px;
 	text-decoration: none;
-	margin-top: 17px;
-	top: 17px;
-	margin-left: 120px;
+	margin-left: 0px;
+	margin-right: 0px;
 	float: center;
 }
 	
@@ -37,7 +38,8 @@
 
 /*My Tests Link styling ended*/
 .btnCloser:hover{
-	 transform: perspective(1px) scale3d(1.05, 1.05, 1) translateZ(0) 
+	 font-size: 20px;
+	 width: 100px;
 }
 
 /*Offerings styling started*/

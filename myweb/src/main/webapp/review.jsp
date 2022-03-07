@@ -11,7 +11,7 @@
 
 <!-- Stylesheet -->
 <link rel="stylesheet" href="review_style.css" />
-<link rel="stylesheet" href="additionalCSS/text_style.css">
+<link rel="stylesheet" href="additionalCSS/pretty_text_style.css">
 <link rel="stylesheet" href="additionalCSS/tests_style.css">
 <link rel="stylesheet" href="additionalCSS/dark_mode_style.css">
 </head>
@@ -87,7 +87,6 @@
  <!-- Script-->
  <script src="review_script.js"></script>
  <script>
-alert(localStorage.getItem("lang"));
 if(localStorage.getItem("lang") === "kaz"){
 	changetoKaz();
 }

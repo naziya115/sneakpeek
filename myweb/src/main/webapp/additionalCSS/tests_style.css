@@ -16,3 +16,14 @@
 }
 /*My Tests Menu Item styling ended*/
 
+/*My Tests Link styling started*/
+#testLink{
+	margin-top: 5px;
+	top: 15px;
+	text-decoration: none;
+	margin-left: 0px;
+	margin-right: 0px;
+	left: 50px;
+	float: center;
+}
+	

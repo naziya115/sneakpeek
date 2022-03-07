@@ -10,7 +10,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
  <!-- The CSS file for main page-->
  <link rel="stylesheet" href="additionalCSS/mainpage_style.css">
- <link rel="stylesheet" href="additionalCSS/text_style.css">
+ <link rel="stylesheet" href="additionalCSS/pretty_text_style.css">
  <link rel="stylesheet" href="additionalCSS/dark_mode_style.css">
 <!-- Bootstrap CDN-->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
@@ -22,15 +22,10 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <script src="https://code.iconify.design/2/2.1.2/iconify.min.js"></script>
 <style>
-	.dropdown-content {
-	  height: 70px;
-	}
-	#testLink{
-		margin-top: 10px;
-		top: 10px;
-	}
+.dropdown-content {
+   height: 70px;
+}
 </style>
-
 <title>Sneak Peek</title>
 </head>
 <body id = "body">
@@ -39,6 +34,7 @@
 <!--Header with user name, sign up button, and divider between them-->
 <div id = "head" class="header boxShadow">
 <div align = "center" id = "test"><a href = "school_level.jsp" onclick = "sendUserName()" class = "underlineTests" id = "testLink">My Tests</a></div>
+
 
 <!-- Change language -->
 <span id = "languages" onclick = "changeLanguages()" class="iconify" data-icon="ion:language-outline"></span>
@@ -52,6 +48,7 @@
 			<a href="#" lang='rus' onclick = "changetoRus()" class="langItem">rus</a><br>
 		 </div>
 	 </div>
+
 <!-- Ending of languages' settings -->
 
 <svg id = "websiteIcon" xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-bookmark-heart" viewBox="0 0 16 16">
@@ -61,7 +58,7 @@
 <b id = "WebSite_Name">Sneak Peek</b>
 
 <a href = "login.jsp"><button id = "sign_up" class = "btnCloser">Sign Up</button></a>
-
+	 
 
 <div id = "myprofile"  class="value-container">
    <div class="dropdown">
@@ -71,6 +68,7 @@
 		  <p id = "light"> <span class="iconify mode" data-icon="ic:baseline-light-mode"></span>Light</p>
     </div>
 </div>
+
 <script>
 var test = document.getElementById("test");
 $( "div" ).data( "test", { first: "${name}", last: "My Profile" } );

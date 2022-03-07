@@ -16,9 +16,9 @@
 <title>Computer Science</title>
 <!-- Our Custom CSS -->
 <link rel="stylesheet" href="school_level_style.css">
-<link rel="stylesheet" href="additionalCSS/textstyle.css">
+<link rel="stylesheet" href="additionalCSS/pretty_text_style.css">
 <link rel="stylesheet" href="additionalCSS/tests_style.css">
-<link rel="stylesheet" href="additionalCSS/darkmode_style.css">
+<link rel="stylesheet" href="additionalCSS/dark_mode_style.css">
 <script src="https://code.iconify.design/2/2.1.2/iconify.min.js"></script>
 <!-- Font Awesome JS -->
 <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>

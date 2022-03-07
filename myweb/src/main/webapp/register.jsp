@@ -14,8 +14,9 @@
          <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
          <!-- The CSS file for log in page-->
         <link rel="stylesheet" href="register_style.css">
-         <link rel="stylesheet" href="additionalCSS/text_style.css">
-          <link rel="stylesheet" href="additionalCSS/darkmode_style.css">
+        <link rel="stylesheet" href="additionalCSS/pretty_text_style.css">
+        <link rel="stylesheet" href="additionalCSS/darkmode_style.css">
+        <link rel="stylesheet" type="text/css" href="log_in_style.css"/>
     </head>
 <body>
 
@@ -90,10 +91,14 @@
             </div>
           </div>
           <div class="text-center text-lg-start mt-3 pt-2">
-     <button type="submit" id = "btn" class = "btn btn-lg btnCloser"
-                  style = "background-color: #c7b6dc;" style="padding-left: 2.5rem; padding-right: 2.5rem;">Register</button>
-            <p id = "question" style = "color: black;" >Do you have an account? <a href="login.jsp"
-              id = "loginLink">Log In</a></p>
+          
+     		<div id = "signupStyling">
+	             <a href = "login.jsp" id = "btn" type="submit" class = "btnCloser">
+	             <button id = "sign_up" class = "btnCloser">Register</button></a>
+            </div>
+                  
+            <p id = "question">Do you have an account?</p>
+             <a href="login.jsp" id = "loginLink">Log In</a>
           </div>
 
         </form>
@@ -123,6 +128,7 @@ function changetoKaz(){
 	const checkbox = document.querySelector('.checkbox');
 	const question = document.querySelector('#question');
 	const loginLink = document.querySelector('#loginLink');
+	const signupText = document.querySelector('#sign_up');
 	
 	fnameText.textContent = "Аты";
 	lnameText.textContent = "Тегі";
@@ -142,6 +148,8 @@ function changetoKaz(){
     checkbox.textContent = "Мені есіңде сақтаңыз";
 	question.textContent = "Аккаунт бар ма?";
 	loginLink.textContent = "Кіру";
+	
+	signupText.textContent = "Тіркеуге";
 }
 function changetoRus(){
 	const fnameText = document.querySelector('.fnameText');
@@ -155,6 +163,7 @@ function changetoRus(){
 	const checkbox = document.querySelector('.checkbox');
 	const question = document.querySelector('#question');
 	const loginLink = document.querySelector('#loginLink');
+	const signupText = document.querySelector('#sign_up');
 	
 	fnameText.textContent = "Имя";
 	lnameText.textContent = "Фамилия";
@@ -174,6 +183,7 @@ function changetoRus(){
     checkbox.textContent = "Запомнить меня";
 	question.textContent = "Есть ли у вас аккаунт?";
 	loginLink.textContent = "Войти";
+	signupText.textContent = "Зарегистрироваться";
 }
 </script>
 

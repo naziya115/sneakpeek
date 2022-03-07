@@ -14,23 +14,10 @@
          <!-- Bootstrap CDN-->
          <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
          <!-- The CSS file for log in page-->
-       <link rel="stylesheet" type="text/css" href="login_style.css"/>
-        <link rel="stylesheet" href="additionalCSS/text_style.css">
-        <link rel="stylesheet" href="additionalCSS/darkmode_style.css">
+       <link rel="stylesheet" type="text/css" href="log_in_style.css"/>
+       <link rel="stylesheet" href="additionalCSS/pretty_text_style.css">
+       <link rel="stylesheet" href="additionalCSS/darkmode_style.css">
     </head>
-    <style>
-		#loginLink:hover{
-		  color: #fff;
-		}
-		/*Log In Btn Styling*/
-		#signupStyling #sign_up{
-			background-color: #e5ccc9;
-			padding: 8px;
-			border-radius: 8px;
-			border-color: #e5ccc9;
-			width: 150px;
-		}
-</style>
 <body>
   <!--Header with user name, sign up button, and divider between them-->
   <div id = "head" class="header boxShadow">
@@ -84,7 +71,7 @@
                 
             
                   <div id = "signupStyling">
-	                 <a href = "login.jsp" id = "btn" type="submit" class = "btnCloser">
+	                 <a href = "main_page.jsp" id = "btn" type="submit" class = "btnCloser">
 	                 <button id = "sign_up" class = "btnCloser">Log In</button></a>
                   </div>
                 
@@ -122,6 +109,7 @@
 	  	checkbox.textContent = "Мені есіңде сақтаңыз";
 	  	question.textContent = "Бізбен алғаш рет?";
 	  	loginLink.textContent = "Тіркеуге";
+	  	signupText.textContent = "Кіру";
   }
   function changetoRus(){
 		const email = document.querySelector('.email');

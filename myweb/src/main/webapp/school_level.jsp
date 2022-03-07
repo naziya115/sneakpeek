@@ -16,7 +16,7 @@
 <title>Computer Science</title>
 <!-- Our Custom CSS -->
 <link rel="stylesheet" href="school_level_style.css">
-<link rel="stylesheet" href="additionalCSS/textstyle.css">
+<link rel="stylesheet" href="additionalCSS/pretty_text_style.css">
 <link rel="stylesheet" href="additionalCSS/tests_style.css">
 <link rel="stylesheet" href="additionalCSS/dark_mode_style.css">
 <script src="https://code.iconify.design/2/2.1.2/iconify.min.js"></script>
@@ -34,7 +34,7 @@
       <path d="M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v13.5a.5.5 0 0 1-.777.416L8 13.101l-5.223 2.815A.5.5 0 0 1 2 15.5V2zm2-1a1 1 0 0 0-1 1v12.566l4.723-2.482a.5.5 0 0 1 .554 0L13 14.566V2a1 1 0 0 0-1-1H4z"/>
     </svg>
     
-    <b id = "WebSite_Name">Sneak Peek</b>
+    <a href ="main_page.jsp"><b id = "WebSite_Name">Sneak Peek</b></a>
      
  <div id = "myprofile"  class="value-container">
    <div class="dropdown">

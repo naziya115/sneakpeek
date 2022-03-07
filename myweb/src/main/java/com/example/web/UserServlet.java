@@ -34,7 +34,7 @@ public class UserServlet extends HttpServlet {
 	
 		request.getSession().setAttribute("id", u.getId());
 		//response.getWriter().print(u.getId()+"");
-		response.sendRedirect("log_in.html");
+		response.sendRedirect("login.jsp");
 
 	}
 

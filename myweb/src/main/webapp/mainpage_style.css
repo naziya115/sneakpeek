@@ -2,10 +2,6 @@
 *{
   font-family: 'Poppins', sans-serif;
 }
-#testLink{
-		top: 15px;
-		float: center;
-}
 nav{
   flex: 1;
   text-align: center;
