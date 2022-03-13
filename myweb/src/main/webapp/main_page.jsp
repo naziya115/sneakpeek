@@ -11,7 +11,7 @@
  <!-- The CSS file for main page-->
  <link rel="stylesheet" href="additionalCSS/mainpage_style.css">
  <link rel="stylesheet" href="additionalCSS/pretty_text_style.css">
- <link rel="stylesheet" href="additionalCSS/dark_mode_style.css">
+ <link rel="stylesheet" href="additionalCSS/darkmode_style.css">
 <!-- Bootstrap CDN-->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
@@ -25,6 +25,12 @@
 .dropdown-content {
    height: 70px;
 }
+@media only screen and (max-width: 1000px){
+#languages{
+	margin-top: 0px;
+	top: 0px;
+	}
+}
 </style>
 <title>Sneak Peek</title>
 </head>
@@ -34,6 +40,8 @@
 <!--Header with user name, sign up button, and divider between them-->
 <div id = "head" class="header boxShadow">
 <div align = "center" id = "test"><a href = "school_level.jsp" onclick = "sendUserName()" class = "underlineTests" id = "testLink">My Tests</a></div>
+<a id = "analytics" href = "Analytics">Analytics</a>
+
 <!-- Change language -->
 <span id = "languages" onclick = "changeLanguages()" class="iconify" data-icon="ion:language-outline"></span>
 	<div class="dropdown-lang">
@@ -48,7 +56,6 @@
 	 </div>
 
 <!-- Ending of languages' settings -->
-<a id = "analytics" href = "analytics/analytics.jsp">Analytics</a>
 
 
 <svg id = "websiteIcon" xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-bookmark-heart" viewBox="0 0 16 16">
@@ -71,10 +78,16 @@
 
 <script>
 var test = document.getElementById("test");
+var analytics = document.getElementById("analytics");
+var languages = document.getElementById("languages");
 $( "div" ).data( "test", { first: "${name}", last: "My Profile" } );
 if ( $('#username').text().length == 0 ) {
 	$( "#username" ).last().text( $( "div" ).data( "test" ).last);
 	test.textContent = ``;
+	analytics.textContent = ``;
+	languages.style.marginTop = "-1px";
+	languages.style.marginLeft = "200px";
+	
 }else{
 	$( "#username" ).first().text( $( "div" ).data( "test" ).first );
 }
@@ -94,7 +107,7 @@ if ( $('#username').text().length == 0 ) {
     <ul id = "menuList">
       <li><a id = "linktoTests" href = "school_level.jsp">My Tests</a></li>
       <li><a href = "login.jsp" class = "btnCloser">Sign Up</a></li>
-      <li><a href = "analytics/analytics.jsp">Analytics</a></li>
+      <li><a href = "Analytics">Analytics</a></li>
       <li><span style = "color: #fff" id = "myusername">${name}</span></li>
     </ul>
   </nav>
@@ -103,6 +116,7 @@ if ( $('#username').text().length == 0 ) {
 </div>
 <span id = "lightForPhone" class="iconify" data-icon="ic:baseline-light-mode"></span>
 <span id = "darkForPhone" class="iconify" data-icon="ic:baseline-dark-mode"></span>
+
 <span id = "languages" onclick = "changeLanguagesForPhone()" class="iconify" data-icon="ion:language-outline"></span>
 	<div class="dropdown-lang">
 		 <div class="dropdown-content-lang-phones lang_text">
@@ -114,6 +128,7 @@ if ( $('#username').text().length == 0 ) {
 			<a href="#" lang='rus' onclick = "changetoRus()" class="langItem">rus</a><br>
 		 </div>
 	 </div>
+	 
 </div>
 
 <script>
@@ -134,7 +149,7 @@ menuList.style.maxHeight = "0px";
 
 function togglemenu(){
   if(menuList.style.maxHeight == "0px"){
-        menuList.style.maxHeight = "130px";
+        menuList.style.maxHeight = "150px";
   }else{
         menuList.style.maxHeight = "0px";
   }
@@ -256,8 +271,14 @@ function togglemenu(){
           <div class="col-12 col-md-6 col-lg-4">
              <i style="font-size:48px" class="fa animate__animated animate__flipInX">&#xf02d;</i>
             <h4 class = "animate__animated animate__lightSpeedInRight sub">Subjects</h4>
-            <p id = "subText">Sneak Peek offers you tests on three subjects. That is, <a class = "link">english, math and computer science</a>. On this platform you can test you skills and improve your knowledge by analyzing your mistakes.</p>
-          </div>
+            
+            
+           <p id = "subText">Sneak Peek offers you tests on three subjects. That is,
+           <a class = "link">english, math and computer science.</a> 
+           On this platform you can test you skills and improve your knowledge by analyzing your mistakes.</p></div>
+          
+     
+          
           <div class="col-12 col-md-6 col-lg-4">
            <i class="fa fa-pencil-square-o animate__animated animate__flipInX" style="font-size:48px"></i>
             <h4 class = "animate__animated animate__lightSpeedInRight subtest">Tests</h4>
@@ -291,7 +312,7 @@ Sneak Peek
 
 <!--Animation-->
 <script src = "C:\Users\zhana\Downloads\WOW-master\WOW-master\dist\wow.min.js"></script>
-<script src="mainpage_script.js"></script>
+<script src="main_page_script.js"></script>
 <script>new WOW().init();</script>
 </body>
 

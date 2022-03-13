@@ -79,6 +79,7 @@ img {
   text-align : left;
   margin-left: 60px;
   margin-top: 20px;
+  color: #000;
 }
 #websiteIcon{
   position:absolute;
@@ -92,7 +93,7 @@ img {
 #loginImage{
     border-radius: 8px;
     border-style: solid;
-    border-color: #c7b6dc;
+    border-color: #e5ccc9;
     width: 500px;
     height: 350px;
     float: left;

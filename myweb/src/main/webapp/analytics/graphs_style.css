@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+*{
+  font-family: 'Poppins', sans-serif;
+  margin:0;
+  padding: 0;
+}
+body{
+	background-color: #eee;
+}
+/*Graph Bar styling*/
+.chartMenu {
+        width: 100vw;
+        height: 40px;
+        background: #1A1A1A;
+        color: rgba(255, 26, 104, 1);
+      }
+      .chartMenu p {
+        padding: 10px;
+        font-size: 20px;
+      }
+      .chartCard {
+        width: 100vw;
+        height: calc(100vh - 40px);
+        background: rgba(255, 26, 104, 0.2);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .chartBox {
+        width: 700px;
+        padding: 20px;
+        border-radius: 20px;
+        border: solid 3px rgba(255, 26, 104, 1);
+        background: white;
+      }
+      
+      
+      
+      
+b{ 
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 20px; 
+  font-weight: bold;
+  position: fixed;
+  z-index:10;
+}
+.header {
+  width: 100%;
+  position:fixed;
+  z-index: 1;
+  height: 70px;
+  background-color: #fff;
+  text-align : center;
+  top: 0;
+}
+.boxShadow{
+  box-shadow: 0 2px 4px rgba(0, 0, 0, .2);
+}
+#WebSite_Name:hover{
+  color: #e5ccc9;
+  font-size: 20px;
+
+}
+#WebSite_Name{
+  color: #000;
+  position:absolute;
+  top:0;
+  left:0;
+  font-weight: bold;
+  position:fixed;
+  text-align : left;
+  margin-left: 60px;
+  margin-top: 20px;
+
+}
+#websiteIcon{
+  position:absolute;
+  top:0;
+  left:0;
+  position:fixed;
+  text-align : left;
+  margin-top: 20px;
+  margin-left: 20px;
+}
+#username{
+	cursor: pointer;
+	font-family: 'Source Sans Pro', sans-serif;
+    font-size: 20px; 
+    font-weight: bold;
+    position: fixed;
+    top: 20px;
+    right:150px;
+    z-index:10;
+}
+
+#graphs{
+  margin: auto;
+  margin-top: 150px;
+  width: 500px;
+  float: center;
+}
+#graphsText{
+  text-align: center;
+}

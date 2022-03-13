@@ -68,13 +68,13 @@ public class LogIn extends jakarta.servlet.http.HttpServlet {
 			if(resultSet.next()){
 				request.setAttribute("id", resultSet.getString("id"));
 				request.setAttribute("name", resultSet.getString("fname") + " " + resultSet.getString("lname"));
-				 HttpSession session = request.getSession();
-				 session.setAttribute("name", resultSet.getString("fname") + " " + resultSet.getString("lname"));
+				HttpSession session = request.getSession();
+				session.setAttribute("name", resultSet.getString("fname") + " " + resultSet.getString("lname"));
 				 
 				RequestDispatcher rd = request.getRequestDispatcher("main_page.jsp");
 				rd.forward(request, response);
 			}else {
-				response.sendRedirect("register.html");
+				response.sendRedirect("register.jsp");
 			}
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block

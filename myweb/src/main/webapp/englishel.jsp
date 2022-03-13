@@ -18,7 +18,7 @@
 <link rel="stylesheet" href="schoollevel_style.css">
 <link rel="stylesheet" href="additionalCSS/pretty_text_style.css">
 <link rel="stylesheet" href="additionalCSS/tests_style.css">
-<link rel="stylesheet" href="additionalCSS/dark_mode_style.css">
+<link rel="stylesheet" href="additionalCSS/darkmode_style.css">
 <script src="https://code.iconify.design/2/2.1.2/iconify.min.js"></script>
 <!-- Font Awesome JS -->
 <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
@@ -38,7 +38,7 @@
      
  <div id = "myprofile"  class="value-container">
    <div class="dropdown">
-      <span id = "username">${name}</span>
+    <span id = "username">${name}</span>
     	<div class="dropdown-content mode_text">
 		  <p id = "dark"> <span class="iconify mode" data-icon="ic:baseline-mode-night"></span>Night</p>
 		  <p id = "light"> <span class="iconify mode" data-icon="ic:baseline-light-mode"></span>Light</p>
@@ -105,7 +105,7 @@
 
      <table id = "table" class = "separate">
   
-      <tr class = "hoverColumn" onclick="window.location='english1hs.jsp'">
+      <tr class = "hoverColumn" onclick="window.location='english1el.jsp'">
         <td id = "1" scope="row"><a id = "test1">Test 1</a></td>
         <td class = "easy">Easy</td>
         
@@ -127,13 +127,13 @@
 		Statement statement = null;
 		ResultSet resultSet = null;
 
-		String username = (String)request.getSession().getAttribute("username");
-		String subject = "englishhs";
+		String username = (String)request.getSession().getAttribute("name");
+		String subject = "englishel";
 		
 			try{  				
 				connection = DriverManager.getConnection(connectionUrl+dbName, userId, password);
 				statement = connection.createStatement();
-				String sql ="SELECT * FROM scores WHERE username='" + username + "' AND testorder='" + 11 + "'" + " AND subject='" + subject + "'";
+				String sql ="SELECT * FROM scores WHERE username='" + username + "' AND testorder='" + 51 + "'" + " AND subject='" + subject + "'";
 				
 				resultSet = statement.executeQuery(sql);
 
@@ -141,7 +141,7 @@
 			
 			%>
 		        
-		        <td><%=resultSet.getString("score") %>/10</td>
+		        <td><%=resultSet.getString("score") %>/5</td>
 		        
 		      <%
 					}else{%>
@@ -157,14 +157,14 @@
         
         
       </tr>
-    <tr class = "hoverColumn" onclick="window.location='english2hs.jsp'">
+    <tr class = "hoverColumn" onclick="window.location='english2el.jsp'">
         <td id = "2" scope="row"><a id = "test2">Test 2</a></td>
         <td class = "easy">Easy</td>
       <%
 		try{ 
 			connection = DriverManager.getConnection(connectionUrl+dbName, userId, password);
 			statement = connection.createStatement();
-			String sql ="SELECT * FROM scores WHERE username='" + username + "' AND testorder='" + 12 + "'" + " AND subject='" + subject + "'";
+			String sql ="SELECT * FROM scores WHERE username='" + username + "' AND testorder='" + 52 + "'" + " AND subject='" + subject + "'";
 			
 			resultSet = statement.executeQuery(sql);
 
@@ -172,7 +172,7 @@
 		
 		%>
 	        
-	        <td><%=resultSet.getString("score") %>/10</td>
+	        <td><%=resultSet.getString("score") %>/5</td>
 	        
 	      <%
 				}else{%>
@@ -186,14 +186,14 @@
 	      %>     
       </tr>
       
-      <tr class = "hoverColumn" onclick="window.location='english3hs.jsp'">
+      <tr class = "hoverColumn" onclick="window.location='english3el.jsp'">
         <td id = "3" scope="row"><a id = "test3">Test 3</a></td>
         <td class = "average">Average</td>
   <%
 		try{ 
 			connection = DriverManager.getConnection(connectionUrl+dbName, userId, password);
 			statement = connection.createStatement();
-			String sql ="SELECT * FROM scores WHERE username='" + username + "' AND testorder='" + 13 + "'" + " AND subject='" + subject + "'";
+			String sql ="SELECT * FROM scores WHERE username='" + username + "' AND testorder='" + 53 + "'" + " AND subject='" + subject + "'";
 			
 			resultSet = statement.executeQuery(sql);
 
@@ -201,7 +201,7 @@
 		
 		%>
 	        
-	        <td><%=resultSet.getString("score") %>/10</td>
+	        <td><%=resultSet.getString("score") %>/5</td>
 	        
 	      <%
 				}else{%>
@@ -214,14 +214,14 @@
 			}
 	      %>  
       </tr>
-      <tr class = "hoverColumn" onclick="window.location='english4hs.jsp'">
+      <tr class = "hoverColumn" onclick="window.location='english4el.jsp'">
          <td id = "4" scope="row"><a id = "test4">Test 4</a></td>
 	     <td class = "average">Average</td>
          <%
 		try{ 
 			connection = DriverManager.getConnection(connectionUrl+dbName, userId, password);
 			statement = connection.createStatement();
-			String sql ="SELECT * FROM scores WHERE username='" + username + "' AND testorder='" + 14 + "'" + " AND subject='" + subject + "'";
+			String sql ="SELECT * FROM scores WHERE username='" + username + "' AND testorder='" + 54 + "'" + " AND subject='" + subject + "'";
 			
 			resultSet = statement.executeQuery(sql);
 
@@ -229,7 +229,7 @@
 		
 		%>
 	        
-	        <td><%=resultSet.getString("score") %>/10</td>
+	        <td><%=resultSet.getString("score") %>/5</td>
 	        
 	      <%
 				}else{%>
@@ -242,14 +242,14 @@
 			}
 	      %>  
       </tr>
-     <tr class = "hoverColumn" onclick="window.location='english5hs.jsp'">
+     <tr class = "hoverColumn" onclick="window.location='english5el.jsp'">
         <td id = "5" scope="row"><a id = "test5">Test 5</a></td>
         <td class = "hard">Hard</td>
           <%
 		try{ 
 			connection = DriverManager.getConnection(connectionUrl+dbName, userId, password);
 			statement = connection.createStatement();
-			String sql ="SELECT * FROM scores WHERE username='" + username + "' AND testorder='" + 15 + "'" + " AND subject='" + subject + "'";
+			String sql ="SELECT * FROM scores WHERE username='" + username + "' AND testorder='" + 55 + "'" + " AND subject='" + subject + "'";
 			
 			resultSet = statement.executeQuery(sql);
 
@@ -257,7 +257,7 @@
 		
 		%>
 	        
-	        <td><%=resultSet.getString("score") %>/10</td>
+	        <td><%=resultSet.getString("score") %>/5</td>
 	        
 	      <%
 				}else{%>
@@ -275,7 +275,7 @@
      </table>
 
 
-    <script src = "schoollevel_script.js"></script>
+    <script src = "school_level_script.js"></script>
     <script src = "additionalCSS/dark_mode_script.js"></script>
 
 </body>

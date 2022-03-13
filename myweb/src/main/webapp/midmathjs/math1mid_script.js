@@ -12,13 +12,7 @@ var testorder = 46;
 var info;
 var questions = document.getElementById("questions");
 
-var username = localStorage.getItem("username"); 
-
-let username1 = document.querySelector("#username");
-username1.textContent = `${username}`;
-function tests(){
-	localStorage.setItem("username", username); 
-}
+var username = document.getElementById("username").textContent;
 
 window.onload = function(){
   a = 0;

@@ -12,13 +12,8 @@ var testorder = 1;
 var info;
 var questions = document.getElementById("questions");
 
-var username = localStorage.getItem("username"); 
+var username = document.getElementById("username").textContent;
 
-let username1 = document.querySelector("#username");
-username1.textContent = `${username}`;
-function tests(){
-	localStorage.setItem("username", username); 
-}
 
 window.onload = function(){
   a = 0;

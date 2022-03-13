@@ -22,10 +22,9 @@
   <b id = "WebSite_Name">Sneak Peek</b>
 </div>
 
-  <div id = "myprofile"  class="value-container">
-  <span id = "username">My Profile</span>
+<div id = "myprofile"  class="value-container">
+  <span id = "username">${name}</span>
 </div>
-
 <!-- b a a d c b a d b d a -->
       <div class="container-fluid">
          <h3 class = "title">English Test 5</h3>

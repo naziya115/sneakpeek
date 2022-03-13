@@ -1,10 +1,3 @@
-var username = localStorage.getItem("username"); 
-
-let username1 = document.querySelector("#username");
-username1.textContent = `${username}`;
-function tests(){
-	localStorage.setItem("username", username); 
-}
 var dropdown = document.getElementsByClassName("dropdown-btn");
 var i;
 

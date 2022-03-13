@@ -29,8 +29,8 @@
   <b id = "WebSite_Name">Sneak Peek</b>
 </div>
 
-  <div id = "myprofile"  class="value-container">
-  <span id = "username">My Profile</span>
+<div id = "myprofile"  class="value-container">
+  <span id = "username">${name}</span>
 </div>
 
 <!-- b b b a b-->

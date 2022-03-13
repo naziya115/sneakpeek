@@ -8,13 +8,7 @@ var score;
 var testorder = 15;
 var info;
 
-var username = localStorage.getItem("username"); 
-
-let username1 = document.querySelector("#username");
-username1.textContent = `${username}`;
-function tests(){
-	localStorage.setItem("username", username); 
-}
+var username = document.getElementById("username").textContent;
 
 window.onload = function(){
   a = 0;

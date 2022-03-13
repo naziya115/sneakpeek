@@ -18,7 +18,7 @@
 <link rel="stylesheet" href="schoollevel_style.css">
 <link rel="stylesheet" href="additionalCSS/pretty_text_style.css">
 <link rel="stylesheet" href="additionalCSS/tests_style.css">
-<link rel="stylesheet" href="additionalCSS/dark_mode_style.css">
+<link rel="stylesheet" href="additionalCSS/darkmode_style.css">
 <script src="https://code.iconify.design/2/2.1.2/iconify.min.js"></script>
 <!-- Font Awesome JS -->
 <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
@@ -39,6 +39,9 @@
  <div id = "myprofile"  class="value-container">
    <div class="dropdown">
       <span id = "username">${name}</span>
+      <script>
+      	document.getElementById("username").textContent = '${name}';
+      </script>
     	<div class="dropdown-content mode_text">
 		  <p id = "dark"> <span class="iconify mode" data-icon="ic:baseline-mode-night"></span>Night</p>
 		  <p id = "light"> <span class="iconify mode" data-icon="ic:baseline-light-mode"></span>Light</p>
@@ -128,7 +131,7 @@
 		Statement statement = null;
 		ResultSet resultSet = null;
 		
-		String username = (String)request.getSession().getAttribute("username");
+		String username = (String)request.getSession().getAttribute("name");
 		String subject = "mathhs";
 		
 			try{
@@ -414,7 +417,7 @@
      </table>
 
 
-    <script src = "schoollevel_script.js"></script>
+    <script src = "school_level_script.js"></script>
     <script src = "additionalCSS/dark_mode_script.js"></script>
 
 </body>

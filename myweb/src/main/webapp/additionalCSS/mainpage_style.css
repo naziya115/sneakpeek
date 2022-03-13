@@ -33,7 +33,7 @@
 }
 @media (hover: hover) and (pointer: fine) {
   .underline:hover::before{
-  position: relative;
+    position: relative;
     left: 0;
     right: auto;
     width: 100%;
@@ -97,15 +97,6 @@ b{
     font-size: 20px; 
     font-weight: normal;
     position: fixed;
-    z-index:10;
-}
-#myprofile{
-	font-family: 'Source Sans Pro', sans-serif;
-    font-size: 20px; 
-    font-weight: bold;
-    position: fixed;
-    top: 20px;
-    right:170px;
     z-index:10;
 }
 .vl {
@@ -302,7 +293,11 @@ font-family: 'Source Sans Pro', sans-serif;
 .for_phones{
   display: none;
 }
-@media only screen and (max-width: 700px){
+@media only screen and (max-width: 1000px){
+#languages{
+	margin-top: 0px;
+	top: 0px;
+}
   .header{
     display: none;
   }

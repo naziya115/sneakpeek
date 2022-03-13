@@ -10,26 +10,21 @@
 <title>Review</title>
 
 <!-- Stylesheet -->
-<link rel="stylesheet" href="review_style.css" />
+<link rel="stylesheet" href="review_page__style.css" />
 <link rel="stylesheet" href="additionalCSS/pretty_text_style.css">
-<link rel="stylesheet" href="additionalCSS/tests_style.css">
-<link rel="stylesheet" href="additionalCSS/dark_mode_style.css">
+<link rel="stylesheet" href="additionalCSS/darkmode_style.css">
 </head>
-<style>
-	#testLink{
-		margin-top: 10px;
-		top: 10px;
-	}
-</style>
 <body>
 <!--Header with user name, sign up button, and divider between them-->
 <div id = "head" class="header boxShadow">
-   <svg id = "websiteIcon" xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-bookmark-heart" viewBox="0 0 16 16">
+<div align = "center" id = "mytests"><a href = "school_level.jsp" onclick = "tests()"  class = "underlineTests" id = "testLink">My Tests</a></div>
+   
+  <svg id = "websiteIcon" xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-bookmark-heart" viewBox="0 0 16 16">
      <path fill-rule="evenodd" d="M8 4.41c1.387-1.425 4.854 1.07 0 4.277C3.146 5.48 6.613 2.986 8 4.412z"/>
      <path d="M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v13.5a.5.5 0 0 1-.777.416L8 13.101l-5.223 2.815A.5.5 0 0 1 2 15.5V2zm2-1a1 1 0 0 0-1 1v12.566l4.723-2.482a.5.5 0 0 1 .554 0L13 14.566V2a1 1 0 0 0-1-1H4z"/>
    </svg>
-   <b id = "WebSite_Name">Sneak Peek</b>
-  <div align = "center" id = "mytests"><a href = "school_level.jsp" onclick = "tests()"  class = "underlineTests" id = "testLink">My Tests</a></div>
+   <a href ="main_page.jsp"><b id = "WebSite_Name">Sneak Peek</b></a>
+
  </div>
 
 <div class="container">

@@ -11,6 +11,11 @@
 <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@200&display=swap" rel="stylesheet" />
 <link rel="stylesheet" href="additionalCSS/darkmode_style.css">
 <link rel="stylesheet" href="cs_style.css" />
+<style>
+	.video{
+	margin-top: 50px;
+}
+</style>
 </head>
 <body>
 <!--Header with user name, sign up button, and divider between them-->
@@ -22,14 +27,8 @@
   <b id = "WebSite_Name">Sneak Peek</b>
 </div>
 
-<style>
-	.video{
-	margin-top: 50px;
-}
-</style>
-
-  <div id = "myprofile"  class="value-container">
-  <span id = "username">My Profile</span>
+<div id = "myprofile"  class="value-container">
+  <span id = "username">${name}</span>
 </div>
 
 <!-- Q1-Q5 -->

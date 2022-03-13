@@ -21,8 +21,9 @@
   </svg>
   <b id = "WebSite_Name">Sneak Peek</b>
 </div>
-  <div id = "myprofile"  class="value-container">
-  <span id = "username">My Profile</span>
+
+<div id = "myprofile"  class="value-container">
+  <span id = "username">${name}</span>
 </div>
 
 <!-- Q1-Q5 -->

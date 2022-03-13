@@ -44,6 +44,19 @@ if(localStorage.getItem("lang") === "rus"){
 
 changeMode();
 
+function changeLanguages(){
+	var content = document.querySelector(".dropdown-content-lang");
+    if(content.style.height == "100px"){
+        content.style.height = "20px"; 
+        content.style.display = "none"; 
+    }
+    else{
+        content.style.height = "100px"; 
+        content.style.display = "block"; 
+    }
+}
+	
+
 function changeMode() {
         if(localStorage.getItem("darkMode") === "true"){
 				var header = document.getElementById("head");
@@ -74,25 +87,12 @@ function changeMode() {
         }
 }
 
-
-function changeLanguages(){
-	var content = document.querySelector(".dropdown-content-lang");
-    if(content.style.height == "100px"){
-        content.style.height = "20px"; 
-        content.style.display = "none"; 
-    }
-    else{
-        content.style.height = "100px"; 
-        content.style.display = "block"; 
-    }
-}
-		
+	
 		
 	function changetoKaz(){
 				const testLink = document.querySelector('#testLink');
 				localStorage.setItem("lang", "kaz"); 
-				const langEl = document.querySelector('body');
-				const link = document.querySelectorAll('a');
+				const analytics = document.querySelector('#analytics');
 				const platformText = document.querySelector('.title1');
 				const checkitoutText = document.querySelector('#checkitout');
 				const commentText = document.querySelector('#comment');
@@ -124,7 +124,9 @@ function changeLanguages(){
 				signupText.textContent = "Тіркелу";
 				
 				if(profileText.textContent==="My Profile"||profileText.textContent==="Мой Профиль"||profileText.textContent==="Менің Профилім"){
-					profileText.textContent = "Менің Профилім"
+					profileText.textContent = "Менің Профилім";
+					analytics.style.marginRight = "310px";
+					
 				}
 				underlineText.textContent = "Біз Ұсынатын Пәндер Бойынша Тесттер";
 				descriptionText.textContent = "Sneak Peek Сізге келесі пәндер бойынша өз дағдыларыңызды тексеруді ұсынады";
@@ -146,13 +148,13 @@ function changeLanguages(){
 				testreviewHeaderText.textContent = "Шолу";
 				testreviewText.textContent = "Sneak Peek сізге әр пән бойынша 10 тест ұсынады. Тесттер әртүрлі қиындық деңгейлеріне бөлінеді. Яғни, жеңіл, орташа және күрделі.  Сіз күрделілігі бойынша сізге сәйкес келетін тесттерді таңдап, кейін келесі деңгейге өте аласыз.";
 				testLink.textContent = "Менің Тесттерім";
+				analytics.textContent = "Талдау";
 		}
 		
 		function changetoRus(){
 				const testLink = document.querySelector('#testLink');
-				localStorage.setItem("lang", "rus"); 
-				const langEl = document.querySelector('body');
-				const link = document.querySelectorAll('a');
+				localStorage.setItem("lang", "rus");
+				const analytics = document.querySelector('#analytics');
 				const platformText = document.querySelector('.title1');
 				const checkitoutText = document.querySelector('#checkitout');
 				const commentText = document.querySelector('#comment');
@@ -170,6 +172,7 @@ function changeLanguages(){
 				
 				const quoteheaderText = document.querySelector('#quoteheader');
 				const quoteText = document.querySelector('.quoteText');
+		
 				
 				const subHeaderText = document.querySelector('.sub');
 				const subtestHeaderText = document.querySelector('.subtest');
@@ -178,6 +181,8 @@ function changeLanguages(){
 				const subText = document.querySelector('#subText');
 				const subtestText = document.querySelector('#subtestText');
 				const testreviewText = document.querySelector('#testreviewText');
+				
+				
 				platformText.textContent = "Лучшая платформа для того, чтобы стать учеником №1 в школе";
 				checkitoutText.textContent = "Посмотрите сюда";
 				commentText.textContent = "Здесь вы можете проверить себя по различным школьным предметам, чтобы узнать свои слабые и сильные стороны и улучшить их.";
@@ -185,6 +190,7 @@ function changeLanguages(){
 				
 				if(profileText.textContent==="My Profile"||profileText.textContent==="Мой Профиль"||profileText.textContent==="Менің Профилім"){
 					profileText.textContent = "Мой Профиль";
+					analytics.style.marginRight = "300px";
 				}
 				underlineText.textContent = "Тесты по предметам, которые мы предлагаем";
 				descriptionText.textContent = "Sneak Peek предлагает вам проверить свои навыки по следующим темам";
@@ -206,6 +212,8 @@ function changeLanguages(){
 				testreviewHeaderText.textContent = "Обзор";
 				testreviewText.textContent = "Sneak Peek предлагает вам 10 тестов по каждому предмету. Тесты разделены на различные уровни сложности. Это легкий, средний и сложный.  Вы можете выбрать тесты, которые подходят вам по уровню сложности, и затем перейти на следующий уровень."
 				testLink.textContent = "Мои Тесты";
+				analytics.textContent = "Аналитика";
+			
 		}
 function changetoEng(){
 	localStorage.setItem("lang", "eng");

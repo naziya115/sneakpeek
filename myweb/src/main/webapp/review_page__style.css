@@ -1,7 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+*{
+  font-family: 'Poppins', sans-serif;
+  
+}
 body {
   background-color: #eee;
   margin: 0;
-  font-family:"Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+#testLink{
+	font-weight: normal;
+	margin-top: 10px;
+	top: 10px;
+	font-size: 20px;
+	text-decoration: none;
+	z-index: 1;
+    position:fixed;
+    text-align: center;
+    color: black;
+}
+#WebSite_Name{
+	color: black;
+}
+#WebSite_Name:hover{
+	color: #e5ccc9;
 }
 .container{
   width: 100%;
@@ -152,18 +173,6 @@ b{
   text-align : left;
   margin-top: 20px;
   margin-left: 20px;
-}
-#testLink{
-    z-index: 1;
-    position:fixed;
-    text-align: center;
-    top: 0;
-    margin-top: 20px;
-    color: black;
-    font-family: 'Source Sans Pro', sans-serif;
-    font-size: 20px; 
-    font-weight: bold;
-    text-decoration: none;
 }
 /*End of header styling*/
 

@@ -18,13 +18,14 @@
 <link rel="stylesheet" href="schoollevel_style.css">
 <link rel="stylesheet" href="additionalCSS/pretty_text_style.css">
 <link rel="stylesheet" href="additionalCSS/tests_style.css">
-<link rel="stylesheet" href="additionalCSS/dark_mode_style.css">
+<link rel="stylesheet" href="additionalCSS/darkmode_style.css">
 <script src="https://code.iconify.design/2/2.1.2/iconify.min.js"></script>
 <!-- Font Awesome JS -->
 <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
 <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
 </head>
 <body>
+
 <!--Header with user name, sign up button, and divider between them-->
 <div id = "head" class="header boxShadow">
      <div align = "center" id = "mytests"><a href = "school_level.jsp" onclick = "tests()"  class = "underlineTests" id = "testLink">My Tests</a></div>
@@ -128,7 +129,7 @@
 		Statement statement = null;
 		ResultSet resultSet = null;
 		
-		String username = (String)request.getSession().getAttribute("username");
+		String username = (String)request.getSession().getAttribute("name");
 		String subject = "cshs";
 		
 			try{
@@ -414,7 +415,7 @@
      </table>
 
 
-    <script src = "schoollevel_script.js"></script>
+    <script src = "school_level_script.js"></script>
     <script src = "additionalCSS/dark_mode_script.js"></script>
 
 </body>
