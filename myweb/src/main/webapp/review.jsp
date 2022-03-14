@@ -80,7 +80,7 @@
 
 
  <!-- Script-->
- <script src="review_script.js"></script>
+ <script src="reviewscript.js"></script>
  <script>
 if(localStorage.getItem("lang") === "kaz"){
 	changetoKaz();

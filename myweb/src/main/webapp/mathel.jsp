@@ -271,10 +271,83 @@
 			}
 	      %>  
       </tr>
+      
+          <tr class = "hoverColumn" onclick="window.location='math6elrus.jsp'">
+        	<td id = "5" scope="row"><a id = "test1lan">Test 6</a></td>
+        	<td class = "hard">Hard</td>
+          <%
+		try{ 
+			connection = DriverManager.getConnection(connectionUrl+dbName, userId, password);
+			statement = connection.createStatement();
+			String sql ="SELECT * FROM scores WHERE username='" + username + "' AND testorder='" + 70 + "'" + " AND subject='" + subject + "'";
+			
+			resultSet = statement.executeQuery(sql);
+
+			if(resultSet.next()){
+		
+		%>
+	        
+	        <td><%=resultSet.getString("score") %>/5</td>
+	        
+	      <%
+				}else{%>
+				 <td>-</td>
+	      <%
+			}
+	        connection.close();
+			} catch (Exception e) {
+			e.printStackTrace();
+			}
+	      %>  
+      </tr>
+      
+      
+          <tr class = "hoverColumn" onclick="window.location='math7elkaz.jsp'">
+        	<td id = "5" scope="row"><a id = "test2lan">Test 7</a></td>
+        	<td class = "hard">Hard</td>
+          <%
+		try{ 
+			connection = DriverManager.getConnection(connectionUrl+dbName, userId, password);
+			statement = connection.createStatement();
+			String sql ="SELECT * FROM scores WHERE username='" + username + "' AND testorder='" + 71 + "'" + " AND subject='" + subject + "'";
+			
+			resultSet = statement.executeQuery(sql);
+
+			if(resultSet.next()){
+		
+		%>
+	        
+	        <td><%=resultSet.getString("score") %>/5</td>
+	        
+	      <%
+				}else{%>
+				 <td>-</td>
+	      <%
+			}
+	        connection.close();
+			} catch (Exception e) {
+			e.printStackTrace();
+			}
+	      %>  
+      </tr>
      </table>
 
 
     <script src = "school_level_script.js"></script>
+       <script>
+    if(localStorage.getItem("lang") === "rus"){
+		const test1rus = document.querySelector('#test1lan');
+		test1rus.textContent = "Тест 6 (Рус)";
+		const test3kaz = document.querySelector('#test2lan');
+		test3kaz.textContent = "Тест 7 (Каз)";
+    }
+    if(localStorage.getItem("lang") === "kaz"){
+    	const test1rus = document.querySelector('#test1lan');
+    	test1rus.textContent = "Тест 6 (Орыс)";
+    	const test3kaz = document.querySelector('#test2lan');
+    	test3kaz.textContent = "Тест 7 (Қаз)";
+    }
+	</script>
     <script src = "additionalCSS/dark_mode_script.js"></script>
 
 </body>

@@ -1513,3 +1513,58 @@ function show(){
 		ex4.textContent = `The correct answer is A`;
 		ex5.textContent = `The correct answer is A`;
 }
+
+/*Review for cs elementary test 6 rus */
+	if(testorder==67){
+		title.textContent = 'Информатика Тест ' + 6;
+		description.textContent = `*В практическом тесте у вас было 5 вопросов с множественным выбором ` + 4 + `. Все вопросы были созданы по теме "Базовые знания по информатике".`;
+		ex1.textContent = `Правильный ответ - D`;
+		ex2.textContent = `Правильный ответ - D`;
+		ex3.textContent = `Правильный ответ - D`;
+		ex4.textContent = `Правильный ответ - В`;
+		ex5.textContent = `Правильный ответ - A`;
+}
+
+/*Review for cs elementary test 7 rus */
+	if(testorder==68){
+		title.textContent = 'Информатика Тест ' + 7;
+		description.textContent = `*В практическом тесте у вас было 5 вопросов с множественным выбором ` + 4 + `. Все вопросы были созданы по теме "Базовые знания по информатике".`;
+		ex1.textContent = `Правильный ответ - D`;
+		ex2.textContent = `Правильный ответ - D`;
+		ex3.textContent = `Правильный ответ - D`;
+		ex4.textContent = `Правильный ответ - В`;
+		ex5.textContent = `Правильный ответ - A`;
+}
+
+/*Review for cs elementary test 8 kaz */
+	if(testorder==69){
+		title.textContent = 'Информатика Тест ' + 8;
+		description.textContent = `*В практическом тесте у вас было 5 вопросов с множественным выбором ` + 4 + `. Все вопросы были созданы по теме "Базовые знания по информатике".`;
+		ex1.textContent = `Правильный ответ - C`;
+		ex2.textContent = `Правильный ответ - B`;
+		ex3.textContent = `Правильный ответ - A`;
+		ex4.textContent = `Правильный ответ - C`;
+		ex5.textContent = `Правильный ответ - A`;
+}
+
+/*Review for cs elementary test 6 rus */
+	if(testorder==70){
+		title.textContent = 'Математика Тест ' + 6;
+		description.textContent = `*В практическом тесте у вас было 5 вопросов с множественным выбором ` + 4 + `. Все вопросы были созданы по теме "Базовые знания по математике".`;
+		ex1.textContent = `Правильный ответ - C`;
+		ex2.textContent = `Правильный ответ - C`;
+		ex3.textContent = `Правильный ответ - A`;
+		ex4.textContent = `Правильный ответ - C`;
+		ex5.textContent = `Правильный ответ - A`;
+}
+
+/*Review for cs elementary test 7 kaz */
+	if(testorder==71){
+		title.textContent = 'Математика Тест ' + 7;
+		description.textContent = `*В практическом тесте у вас было 5 вопросов с множественным выбором ` + 4 + `. Все вопросы были созданы по теме "Базовые знания по математике".`;
+		ex1.textContent = `Правильный ответ - C`;
+		ex2.textContent = `Правильный ответ - C`;
+		ex3.textContent = `Правильный ответ - A`;
+		ex4.textContent = `Правильный ответ - C`;
+		ex5.textContent = `Правильный ответ - A`;
+}

@@ -33,7 +33,7 @@
 <form action=ScoresServlet method = "post" name = "form" >
 <div class="question">
   <p><strong>Q1</strong>: More than one instruction or command to be followed in order. </p>
-  <label><input onclick="option001()" name="button001" type="radio" /> A. Sequence</label>
+  <label><input onclick="option001()" name="button001" type="radio"/> A. Sequence</label>
   <label><input onclick="option002()" name="button001" type="radio" /> B. Algorithm</label>
   <label><input onclick="option003()" name="button001" type="radio" /> C. Bug</label>
   <label><input onclick="option004()" name="button001" type="radio"/> D. Command</label>

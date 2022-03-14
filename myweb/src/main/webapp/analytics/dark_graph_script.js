@@ -21,6 +21,6 @@ function changeMode() {
         if(localStorage.getItem("darkMode") === "true"){
 				var header = document.getElementById("head");
 				header.style.backgroundColor = "#dcdcdc";
-                document.body.style.backgroundColor = "grey";
+                document.body.style.backgroundColor = "#c0c0c0";
         }
 }

@@ -33,7 +33,7 @@
 <section id = "graphs">
 	<h1 id = "graphsText">Your Progress Analytics</h1>
 	<canvas id = "resultChart" width = "250" height = "200"></canvas>
-<script src="analytics/darkgraph_script.js"></script>
+<script src="analytics/dark_graph_script.js"></script>
 <script>
 if(localStorage.getItem("lang") === "eng"){
 var resultChart = document.getElementById("resultChart");

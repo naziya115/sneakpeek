@@ -27,7 +27,6 @@ function changeMode() {
         }
 }
 
-
 function changetoKaz(){	
 	const hsHeader = document.querySelector('#hsHeader');
 	const midHeader = document.querySelector('#midHeader');
@@ -111,6 +110,7 @@ function changetoKaz(){
 	t8.textContent = "Тест 8";
 	t9.textContent = "Тест 9";
 	t10.textContent = "Тест 10";
+	
 }
 		
 function changetoRus(){
@@ -173,6 +173,8 @@ function changetoRus(){
 	
 	level.textContent = "Уровень";
 	score.textContent = "Оценка";
+
+	
 	
 	const t1 = document.querySelector('#test1');
 	const t2 = document.querySelector('#test2');
@@ -195,4 +197,5 @@ function changetoRus(){
 	t8.textContent = "Тест 8";
 	t9.textContent = "Тест 9";
 	t10.textContent = "Тест 10";
+
 }

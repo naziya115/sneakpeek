@@ -14,6 +14,8 @@ var questions = document.getElementById("questions");
 
 var username = document.getElementById("username").textContent;
 
+
+
 window.onload = function(){
   a = 0;
   message001.innerHTML = questions;
