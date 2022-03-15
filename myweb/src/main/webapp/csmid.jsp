@@ -270,11 +270,65 @@
 			}
 	      %>  
       </tr>
+      
+     
+        <tr class = "hoverColumn" onclick="window.location='cs6mid.jsp'">
+        <td id = "6" scope="row"><a id = "test6">Test 6</a></td>
+        <td class = "hard">Hard</td>
+	        <td class = "scoreRes">-</td>
+	        <script>
+	        if(localStorage.getItem("task1")!=null&&localStorage.getItem("lang") === "rus"){
+	        	document.querySelector(".scoreRes").textContent = "на рассмотрении";
+	        }
+	        if(localStorage.getItem("task1")!=null&&localStorage.getItem("lang") === "kaz"){
+	        	document.querySelector(".scoreRes").textContent = "қарауда";
+	        }
+	        if(localStorage.getItem("task1")!=null&&localStorage.getItem("lang") === "eng"){
+	        	document.querySelector(".scoreRes").textContent = "pending";
+	        }
+	        </script>
+      </tr>
+      
+        <tr class = "hoverColumn" onclick="window.location='cs7mid.jsp'">
+        <td id = "7" scope="row"><a id = "test7">Test 7</a></td>
+        <td class = "hard">Hard</td>
+	        <td class = "scoreRes2">-</td>
+	        <script>
+	        if(localStorage.getItem("task2")!=null&&localStorage.getItem("lang") === "rus"){
+	        	document.querySelector(".scoreRes2").textContent = "на рассмотрении";
+	        }
+	        if(localStorage.getItem("task2")!=null&&localStorage.getItem("lang") === "kaz"){
+	        	document.querySelector(".scoreRes2").textContent = "қарауда";
+	        }
+	        if(localStorage.getItem("task2")!=null&&localStorage.getItem("lang") === "eng"){
+	        	document.querySelector(".scoreRes2").textContent = "pending";
+	        }
+	        </script>
+      </tr>
  
      </table>
 
 
     <script src = "school_level_script.js"></script>
+     <script>
+    if(localStorage.getItem("lang") === "rus"){
+		const test1rus = document.querySelector('#test6');
+		test1rus.textContent = "Тест 6";
+		const test3kaz = document.querySelector('#test7');
+		test3kaz.textContent = "Тест 7";
+		
+		const scoreRes = document.getElementsByClassName("scoreRes");  
+	    for(var i = 0; i < hard.length; i++){
+	    	scoreRes[i].innerText = "на рассмотрении";    
+	    }
+    }
+    if(localStorage.getItem("lang") === "kaz"){
+    	const test1rus = document.querySelector('#test6');
+    	test1rus.textContent = "Тест 6";
+    	const test3kaz = document.querySelector('#test7');
+    	test3kaz.textContent = "Тест 7";
+    }
+	</script>
     <script src = "additionalCSS/dark_mode_script.js"></script>
 
 </body>

@@ -173,7 +173,6 @@ function changetoRus(){
 	
 	level.textContent = "Уровень";
 	score.textContent = "Оценка";
-
 	
 	
 	const t1 = document.querySelector('#test1');

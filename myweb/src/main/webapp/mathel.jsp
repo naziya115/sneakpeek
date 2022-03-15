@@ -334,7 +334,7 @@
 
 
     <script src = "school_level_script.js"></script>
-       <script>
+    <script>
     if(localStorage.getItem("lang") === "rus"){
 		const test1rus = document.querySelector('#test1lan');
 		test1rus.textContent = "Тест 6 (Рус)";
