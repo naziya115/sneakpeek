@@ -8,7 +8,7 @@
     <title>Computer Science Test 6</title>
 </head>
 <body>
-<!--Header with user name, sign up button, and divider between them-->
+<!--Header with user name, sign up button, and divider between them -->
 <div id = "head" class="header boxShadow">
 
     <svg id = "websiteIcon" xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-bookmark-heart" viewBox="0 0 16 16">
