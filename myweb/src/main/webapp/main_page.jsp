@@ -25,12 +25,6 @@
 .dropdown-content {
    height: 70px;
 }
-@media only screen and (max-width: 1000px){
-#languages{
-	margin-top: 0px;
-	top: 0px;
-	}
-}
 </style>
 <title>Sneak Peek</title>
 </head>
@@ -106,8 +100,32 @@ if ( $('#username').text().length == 0 ) {
   <nav>
     <ul id = "menuList">
       <li><a id = "linktoTests" href = "school_level.jsp">My Tests</a></li>
-      <li><a href = "login.jsp" class = "btnCloser">Sign Up</a></li>
-      <li><a href = "Analytics">Analytics</a></li>
+      <script>
+      if(localStorage.getItem("lang") === "rus"){
+    	  document.getElementById("linktoTests").textContent = "Мои Тесты";
+    	}
+    	if(localStorage.getItem("lang") === "kaz"){
+    		document.getElementById("linktoTests").textContent = "Менің Тесттерім";
+    	}
+      </script>
+      <li><a href = "login.jsp" id = "SignUpText" class = "btnCloser">Sign Up</a></li>
+        <script>
+        if(localStorage.getItem("lang") === "rus"){
+      	  document.getElementById("SignUpText").textContent = "Войти";
+      	}
+      	if(localStorage.getItem("lang") === "kaz"){
+      		document.getElementById("SignUpText").textContent = "Тіркелу";
+      	}
+      </script>
+      <li><a href = "Analytics" id = "graph">Analytics</a></li>
+        <script>
+        if(localStorage.getItem("lang") === "rus"){
+        	  document.getElementById("graph").textContent = "Аналитика";
+        	}
+        	if(localStorage.getItem("lang") === "kaz"){
+        		document.getElementById("graph").textContent = "Талдау";
+        	}
+      </script>
       <li><span style = "color: #fff" id = "myusername">${name}</span></li>
     </ul>
   </nav>
@@ -136,7 +154,13 @@ var linktoTests = document.getElementById("linktoTests");
 var myusername = document.getElementById("myusername");
 $( "div" ).data( "test", { first: "${name}", last: "My Profile" } );
 if ( $('#myusername').text().length == 0 ) {
-	myusername.textContent = `My Profile`;
+	 if(localStorage.getItem("lang") === "eng"){
+		myusername.textContent = `My Profile`;
+	}if(localStorage.getItem("lang") === "kaz"){
+		myusername.textContent = `Менің Профилім`;
+	}if(localStorage.getItem("lang") === "rus"){
+		myusername.textContent = `Мой Профиль`;
+	}
 	linktoTests.textContent = ``;
 }else{
 	$( "#myusername" ).first().text( $( "li" ).data( "test" ).first );

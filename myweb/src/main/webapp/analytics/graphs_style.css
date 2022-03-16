@@ -96,9 +96,15 @@ b{
 #graphs{
   margin: auto;
   margin-top: 150px;
-  width: 500px;
+  width: 50%;
   float: center;
 }
 #graphsText{
   text-align: center;
+}
+
+@media only screen and (max-width: 900px){
+#graphs{
+  width: 100%;
+}
 }
